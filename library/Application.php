@@ -16,22 +16,22 @@ class Application
     public function run()
     {
             if (isset($_POST['submit'])) {
-                $template = new \StoredLibrary\Template(__DIR__.'\..\public\header.tlp.php');
+                $template = new \StoredLibrary\Template(__DIR__.'\..\public\header.tpl.php');
                 $template->__set('TITLE_PAGE', 'Controller Smarty Energy');
                 $template->__set("CSSPATH", "public/css/");
-                $layout   = new \StoredLibrary\Template(__DIR__.'\..\public\intro.tlp.php');
+                $layout   = new \StoredLibrary\Template(__DIR__.'\..\public\intro.tpl.php');
                 $layout->__set('HEADER', $template->display());
-                $template = new \StoredLibrary\Template(__DIR__.'\..\public\footer.tlp.php');
+                $template = new \StoredLibrary\Template(__DIR__.'\..\public\footer.tpl.php');
                 $template->__set("JSPATH", "public/js/");
                 $layout->__set('FOOTER', $template->display());
                 echo $layout->display();
             } else {
-                $template = new \StoredLibrary\Template(__DIR__.'\..\public\header.tlp.php');
+                $template = new \StoredLibrary\Template(__DIR__.'\..\public\header.tpl.php');
                 $template->__set('TITLE_PAGE', 'Controller Smarty Energy');
                 $template->__set("CSSPATH", "public/css/");
-                $layout   = new \StoredLibrary\Template(__DIR__.'\..\public\login.tlp.php');
+                $layout   = new \StoredLibrary\Template(__DIR__.'\..\public\login.tpl.php');
                 $layout->__set('HEADER', $template->display());
-                $template = new \StoredLibrary\Template(__DIR__.'\..\public\footer.tlp.php');
+                $template = new \StoredLibrary\Template(__DIR__.'\..\public\footer.tpl.php');
                 $template->__set("JSPATH", "public/js/");
                 $layout->__set('FOOTER', $template->display());
                 echo $layout->display();

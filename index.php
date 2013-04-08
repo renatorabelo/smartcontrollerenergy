@@ -5,6 +5,7 @@ $loader = new \StoredLibrary\Classloader(APP_LIBRARY);
 $loader->registerNamespace('StoredLibrary', __DIR__.DIRECTORY_SEPARATOR.'library');
 $loader->register();
 try {
+    \StoredLibrary\Connection::getInstance();
     \StoredLibrary\Application::getInstance()->run();
 } catch (\Exception $e){
     die($e->getMessage());
