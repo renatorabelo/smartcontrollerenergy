@@ -1,0 +1,160 @@
+body {
+    background-color:#fafafa !important;
+}
+
+.header .navbar-inner {
+    background-color: #434343 !important;
+}
+
+.header .btn-navbar {
+    background-color: #434343 !important;
+}
+
+.header .nav .dropdown-toggle:hover,
+.header .nav .dropdown.open .dropdown-toggle {
+    background-color: #4f4f4f !important;
+}
+
+.header .nav li.dropdown .dropdown-toggle i {
+    color: #808080 !important;
+}
+
+.page-content {
+    border-left: 1px solid #e2e2e2 !important;
+    border-bottom: 1px solid #e2e2e2 !important;
+}
+.row-fluid {
+    width: 99.99%;
+}
+
+.page-sidebar > ul > li > a {
+    border-top: 1px solid #e2e2e2 !important;
+    color: #000 !important;
+}
+
+.page-sidebar > ul > li:first-child > a {
+    border-top: 1px solid transparent !important;
+}
+
+.page-sidebar > ul > li:last-child > a {
+    border-bottom: 1px solid transparent !important;
+}
+
+.page-sidebar > ul > li a i {
+    color: #ccc !important;
+}
+
+.page-sidebar > ul > li.open > a,
+.page-sidebar > ul > li > a:hover,
+.page-sidebar > ul > li:hover>a {
+    background: #eee;
+    border-top: 1px solid #e8e8e8;
+}
+
+.page-sidebar > ul > li.active > a .selected {
+    right:-7px;
+    top:1px;
+    width: 7px;
+    height: 39px;
+    background-image: url("../../img/sidebar-menu-arrow-green.png");
+}
+
+.page-sidebar > ul > li.active > a{
+    background: #28b779 !important;
+    border-top-color: transparent !important;
+    color:#fff !important;
+}
+.page-sidebar > ul > li.active > a i {
+    color:#fff !important;
+}
+.page-sidebar > ul > li > a.open {
+    background: #fff;
+}
+
+.page-sidebar > ul > li > a > .arrow:before,
+.page-sidebar > ul > li > a > .arrow.open:before {
+    color: #ccc !important;
+}
+
+.page-sidebar > ul > li.active > a .arrow:before,
+.page-sidebar > ul > li.active > a .arrow.open:before {
+    color: #fff !important;
+}
+
+.page-sidebar > ul > li > ul.sub-menu > li > a {
+    margin-left:0px;
+    padding-left: 50px;
+    color: #222 !important;
+}
+
+.page-sidebar > ul > li > ul.sub-menu > li:first-child > a {
+    border-top: 0px !important;
+}
+
+.page-sidebar > ul > li > ul.sub-menu > li.active > a,
+.page-sidebar > ul > li > ul.sub-menu > li > a:hover {
+    color: #818181 !important;
+    background: #efefef !important;
+}
+
+.page-sidebar > ul > li > ul.sub-menu > li > ul.sub-menu > li.active > a,
+.page-sidebar > ul > li > ul.sub-menu > li > ul.sub-menu > li > a:hover,
+.page-sidebar > ul > li > ul.sub-menu > li.open > a  {
+    color: #818181 !important;
+    background: #efefef !important;
+}
+
+.page-sidebar > ul > li > ul.sub-menu > li > ul.sub-menu > li > a {
+    color: #222 !important;
+}
+
+.page-sidebar > ul > li > ul.sub-menu  a .arrow:before,
+.page-sidebar > ul > li > ul.sub-menu  a .arrow.open:before {
+    color: #ccc !important;
+}
+
+.sidebar-toggler {
+    background-image: url(../../img/sidebar-toggler-light.jpg);
+    background-color: #333;
+}
+
+.sidebar-closed .page-sidebar > ul > li:hover .sub-menu {
+    background-color: #fbfbfb;
+}
+
+/***
+Tablet and Mobile
+***/
+@media (max-width:979px) {
+    .page-sidebar {
+        background-color: #f1f1f1 !important;
+        border-right: none !important;
+    }
+
+    .page-sidebar > ul > li > a {
+        border-top: 1px solid #ccc !important;
+    }
+
+    .page-sidebar > ul > li:first-child > a {
+        border-top: 0 !important;
+    }
+
+    .page-sidebar > ul > li:last-child > a {
+        border-bottom: 0 !important;
+    }
+
+    .page-sidebar > ul > li.open > a,
+    .page-sidebar > ul > li >a:hover,
+    .page-sidebar > ul > li:hover>a {
+        background: #ccc;
+    }
+
+    .page-sidebar > ul > li > a:hover > i {
+        color: #333 !important;
+    }
+
+    .page-sidebar > ul > li > ul.sub-menu > li.active > a,
+    .page-sidebar > ul > li > ul.sub-menu > li > a:hover {
+        background: #ccc !important;
+    }
+}
