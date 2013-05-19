@@ -5,20 +5,46 @@
  * Time: 03:38
  * To change this template use File | Settings | File Templates.
  */
-
 var Framework = {
-    request: function (form, method) {
-        if (method == 'POST') {
-            var obj = $(form).serializeArray();
-            alert(obj);
-
-        }
+    request: function (action, data, type, responseHandler) {
+        var params = {
+            action : action,
+            dataset : JSON.stringify(data)
+        };
+        $('body').append('<div class="modal-backdrop fade in" id="modalback">'+
+                '<div id="ajaxdiv">'+
+                    '<img src="public/img/ajax-loader.gif" />'+
+                '</div>'+
+            '</div>'
+        );
+        $.ajax({
+            type: type,
+            url: 'index.php',
+            data: params,
+            timeout : 30000,
+            success: function(response) {
+                responseHandler(response);
+            },
+            error: function(error) {
+                alert(error);
+            },
+            complete: function () {
+                $('#modalback').remove();
+            }
+        })
+    },
+    loadWindow : function (windowName) {
+        Framework.request('loadWindow', windowName, 'GET', function (response) {
+            $('.page-content').empty().append(response);
+            $('#pageDashboard').removeClass('start active');
+            $('#pageUser').removeClass('start active');
+            $('#pageSobre').removeClass('start active');
+            $('#'+windowName).addClass('start active');
+        })
     },
     init: function () {
         this._handleSidebar();
         this._handleStyler();
-    },
-    loadWindow: function () {
     },
     _handleSidebar: function () {
         var sideBarOpen = true;
@@ -39,6 +65,7 @@ var Framework = {
         var panel = $('.color-panel');
         $('.icon-color', panel).click(function () {
             $('.color-mode').show();
+            alert('oi');
             $('.icon-color-close').show();
         });
 

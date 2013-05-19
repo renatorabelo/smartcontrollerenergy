@@ -57,7 +57,14 @@ class Classloader
                         $file = $dir.DIRECTORY_SEPARATOR.str_replace('_', DIRECTORY_SEPARATOR, $className).'.php';
                         if (file_exists($file)) {
                             return $file;
+                        } else {
+                            $namespace = str_replace($ns, '', $namespace);
+                            $file = $dir.$namespace.DIRECTORY_SEPARATOR.str_replace('_', DIRECTORY_SEPARATOR, $className).'.php';
+                            if (file_exists($file)) {
+                                return $file;
+                            }
                         }
+
                     }
                 }
             }
