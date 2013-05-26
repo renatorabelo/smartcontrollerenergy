@@ -16,8 +16,10 @@
                     </ul>
                 </div>
             </div>
+            <script>Framework._handleStyler();</script>
             <h3 class="page-title">
                 Perfil de usuário
+                <small>Configurações</small>
             </h3>
             <ul class="breadcrumb">
                 <li>
@@ -46,21 +48,109 @@
             <!--BEGIN TABS-->
             <div class="tabbable tabbable-custom tabbable-full-width">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab_1_1" data-toggle="tab">Usuário</a></li>
-                    <!--<li><a href="#tab_1_2" data-toggle="tab">Editar</a></li>-->
+                    <li class="active"><a href="#TabResumo" data-toggle="tab">Resumo do Usuário</a></li>
+                    <li><a href="#TabConfig" data-toggle="tab">Editar configurações</a></li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane profile-classic row-fluid active" id="tab_1_1">
+                    <div class="tab-pane profile-classic row-fluid active" id="TabResumo">
                         <div class="span2"><img src="public/img/foto.jpg" alt=""></div>
                         <ul class="unstyled span10">
                             <li><span>Nome:</span> Kessiler</li>
-                            <li><span>País:</span> Brasil</li>
-                            <li><span>Data de Nascimento:</span> 19/05/2013</li>
-                            <li><span>Ocupação:</span> Web Developer</li>
                             <li><span>Email:</span> <a href="#">kessiler@kessiler.com</a></li>
-                            <li><span>Website:</span> <a href="#">http://www.kessiler.com</a></li>
-                            <li><span>Status do serviço:</span>Online</li>
+                            <li><span>IP do Arduino:</span>192.168.0.1</li>
+                            <li><span>Status do serviço:</span><font color="green"><b>Online</b></font></li>
                         </ul>
+                    </div>
+                    <div class="tab-pane row-fluid profile-account" id="TabConfig">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="span3">
+                                    <ul class="ver-inline-menu tabbable margin-bottom-10">
+                                        <li class="active">
+                                            <a data-toggle="tab" href="#tab_1-1">
+                                                <i class="icon-cog"></i>
+                                                Informações pessoais
+                                            </a>
+                                            <span class="after"></span>
+                                        </li>
+                                        <li class=""><a data-toggle="tab" href="#tab_2-2"><i class="icon-picture"></i> Alterar Avatar</a></li>
+                                        <li class=""><a data-toggle="tab" href="#tab_3-3"><i class="icon-lock"></i> Alterar senha</a></li>
+                                        <li class=""><a data-toggle="tab" href="#tab_4-4"><i class="icon-eye-open"></i> Configurações do servidor</a></li>
+                                    </ul>
+                                </div>
+                                <div class="span9">
+                                    <div class="tab-content">
+                                        <div id="tab_1-1" class="tab-pane active">
+                                            <div style="height: auto;" id="accordion1-1" class="accordion collapse in">
+                                                <form action="#">
+                                                    <label class="control-label">Nome</label>
+                                                    <input type="text" placeholder="Kessiler" class="m-wrap span8">
+                                                    <label class="control-label">WebSite</label>
+                                                    <input type="text" placeholder="http://www.kessiler.com" class="m-wrap span8">
+                                                    <div class="submit-btn">
+                                                        <a href="#" class="btn green">Salvar alterações</a>
+                                                        <a href="#" class="btn">Cancelar</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div id="tab_2-2" class="tab-pane">
+                                            <div style="height: auto;" id="accordion2-2" class="accordion collapse in">
+                                                <form action="#">
+                                                    <div class="controls">
+                                                        <div class="thumbnail" style="width: 291px; height: 170px;">
+                                                            <img src="public/img/no-image.gif" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="space10"></div>
+                                                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                                                        <div class="input-append">
+                                                              <span class="btn btn-file">
+                                                              <span class="fileupload-new">Selecione o arquivo de </span>
+                                                              <span class="fileupload-exists">Mudança</span>
+                                                              <input type="file" class="default">
+                                                        </div>
+                                                    </div>
+                                                    <div class="space10"></div>
+                                                    <div class="submit-btn">
+                                                        <a href="#" class="btn green">Salvar Alterações</a>
+                                                        <a href="#" class="btn">Cancelar</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div id="tab_3-3" class="tab-pane">
+                                            <div style="height: auto;" id="accordion3-3" class="accordion collapse in">
+                                                <form action="#">
+                                                    <label class="control-label">Senha atual</label>
+                                                    <input type="password" class="m-wrap span8">
+                                                    <label class="control-label">Nova Senha</label>
+                                                    <input type="password" class="m-wrap span8">
+                                                    <label class="control-label">Re-digite a nova senha</label>
+                                                    <input type="password" class="m-wrap span8">
+
+                                                    <div class="submit-btn">
+                                                        <a href="#" class="btn green">Alterar Senha </a>
+                                                        <a href="#" class="btn">Cancelar</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div id="tab_4-4" class="tab-pane">
+                                            <div style="height: auto;" id="accordion4-4" class="accordion collapse in">
+                                                <label class="control-label">IP Arduino:</label>
+                                                <input type="text" placeholder="192.168.0.1" class="m-wrap span8">
+                                                <div class="space5"></div>
+                                                <div class="submit-btn">
+                                                    <a href="#" class="btn green">Salvar alterações</a>
+                                                    <a href="#" class="btn">Cancelar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

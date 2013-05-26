@@ -18,8 +18,8 @@
             </div>
             <script>Framework._handleStyler();</script>
             <h3 class="page-title">
-                Sobre o trabalho
-                <small>Trabalho interdisciplinar de graduação(TIG)</small>
+                Dispositivos
+                <small>Ligue e desligue os dispositivos</small>
             </h3>
             <ul class="breadcrumb">
                 <li>
@@ -27,7 +27,7 @@
                     <a href="#">Home</a>
                     <i class="icon-angle-right"></i>
                 </li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Dispositivos</a></li>
                 <li class="pull-right no-text-shadow">
                     <div id="dashboard-report-range"
                          class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive"
@@ -40,7 +40,27 @@
                     </div>
                 </li>
             </ul>
-            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+
+    <div id="dashboard">
+        <div class="row-fluid">
+            <div class="span2 responsive" data-tablet="span6" data-desktop="span2">
+                <div class="dashboard-stat blue">
+                    <div class="visual">
+                        <i class="icon-off"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">Led</div>
+                        <div class="desc">
+                            ON
+                        </div>
+                    </div>
+                    <a class="more" href="javascript: void(0);" onclick="Framework.requestOnOff($('.desc').text());">
+                        OFF <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

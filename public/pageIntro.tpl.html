@@ -3,7 +3,7 @@
     <div class="header navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <a class="brand" href="#">TIG TEMPLATE</a>
+                <a class="brand" href="#">House Economic</a>
                 <a href="javascript:(0);" class="btn-navbar collapsed" data-toggle="collapse"
                    data-target=".nav-collapse">
                     <img alt="" src="public/img/menu-toggler.png"/>
@@ -32,26 +32,33 @@
 
     <div class="page-container row-fluid">
         <div class="page-sidebar nav-collapse collapse">
-            <ul>
+            <ul id="menu-left">
                 <li class="toggle hidden-phone">
                     <div class="sidebar-toggler hidden-phone"></div>
                 </li>
                 <li id="pageDashboard">
-                    <a href="#" onclick="Framework.loadWindow('pageDashboard');">
+                    <a href="javascript: void(0)" onclick="Framework.loadWindow('pageDashboard');">
                         <i class="icon-home"></i>
                         <span class="title">Indicadores</span>
-                        <span class="selected"></span>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li id="pageDisp">
+                    <a href="javascript: void(0)" onclick="Framework.loadWindow('pageDisp');">
+                        <i class="icon-user"></i>
+                        <span class="title">Dispositivos</span>
+                        <span class="arrow"></span>
                     </a>
                 </li>
                 <li id="pageUser">
-                    <a href="#" onclick="Framework.loadWindow('pageUser');">
+                    <a href="javascript: void(0)" onclick="Framework.loadWindow('pageUser');">
                         <i class="icon-user"></i>
                         <span class="title">Usuário</span>
                         <span class="arrow"></span>
                     </a>
                 </li>
                 <li id="pageSobre">
-                    <a href="#" onclick="Framework.loadWindow('pageSobre');">
+                    <a href="javascript: void(0)" onclick="Framework.loadWindow('pageSobre');">
                         <i class="icon-asterisk"></i>
                         <span class="title">Sobre</span>
                         <span class="arrow"></span>
@@ -65,6 +72,4 @@
     [@FOOTERINTRO]
 </div>
 [@FOOTER]
-<script>
-    Framework.loadWindow('pageDashboard');
-</script>
+<script>Framework.loadWindow('pageDashboard');</script>

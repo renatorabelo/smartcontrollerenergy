@@ -4349,7 +4349,6 @@ For tablets and phones
     ***/
     body {
         margin: 0px !important;
-        /*-overflow-x: hidden;*/
     }
 
     /***
@@ -4381,7 +4380,6 @@ For tablets and phones
     .fixed-top .page-container {
         margin-top: 0px !important;
     }
-
     /***
       Page content
       ***/
@@ -4440,7 +4438,7 @@ For tablets and phones
     }
 
     .login .content {
-        height: 156px;
+        height: 184px;
     }
 
 }
