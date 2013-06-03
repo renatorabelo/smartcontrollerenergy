@@ -6,14 +6,31 @@
  * To change this template use File | Settings | File Templates.
  */
 var Framework = {
+    verifyOnOff: function() {
+        Framework.request('loadIpArduino', '', 'GET', false, function(response) {
+            $.ajax({
+                type: 'GET',
+                url: response,
+                dataType: 'jsonp',
+                data: 'S',
+                jsonp: false,
+                jsonpCallback: 'jsonCallBack',
+                timeout: 3000
+            });
+        });
+        return true;
+    },
+    jsonCallback: function(a) {
+      alert(a);
+    },
     requestOnOff: function(state) {
         if($.trim(state) == 'ON') {
-            state = '1';
-        } else {
             state = '0';
+        } else {
+            state = '1';
         }
-        Framework.request('buildONandOFF', state, 'POST', false, function(response) {
-            if(response == 0)
+        if(Framework.requestArduino(state)) {
+            if(state == '0')
             {
                 $(".dashboard-stat .desc").empty().append('OFF');
                 $(".dashboard-stat .more").empty().append('ON');
@@ -23,7 +40,18 @@ var Framework = {
                 $(".dashboard-stat .more").empty().append('OFF');
                 $(".dashboard-stat").fadeTo(1000, 1.0);
             }
-        })
+        }
+    },
+    requestArduino: function(data) {
+        Framework.request('loadIpArduino', '', 'GET', false, function(response) {
+            $.ajax({
+                type: 'GET',
+                url: response,
+                data: data,
+                timeout: 3000
+            });
+        });
+        return true;
     },
     request: function (action, data, type, loading, responseHandler) {
         var params = {
@@ -62,6 +90,7 @@ var Framework = {
     },
     init: function () {
         this._handleSidebar();
+        this._handleGoTop();
     },
     _handleSidebar: function () {
         var sideBarOpen = true;
@@ -77,6 +106,12 @@ var Framework = {
                 sideBarOpen = true;
             }
         })
+    },
+    _handleGoTop: function () {
+        jQuery('.footer .go-top').click(function (e) {
+                jQuery('html,body').animate({scrollTop: $("body").offset().top}, 'slow');
+                e.preventDefault();
+            });
     },
     menuTemplate: function (windowName) {
         $("#menu-left").find(".start").each(function () {

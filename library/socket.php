@@ -1,30 +1,18 @@
-<html>
-<head></head>
-<body>
 <?php
-echo "Verificando extensoes<br/>";
-if (!extension_loaded('sockets')) {
-    die('The sockets extension is not loaded.');
-}
-error_reporting(E_ALL);
-echo "Criando o socket<br/>";
-$sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-echo "Socket criado<br/>";
-echo "Requisitando conexao<br/>";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Set curl to return the data instead of printing it to the browser.
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT,30); # timeout after 10 seconds, you can increase it
+curl_setopt($ch, CURLOPT_USERAGENT , "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
+curl_setopt($ch, CURLOPT_URL, "201.80.136.226:8081/?0"); #set the url and get string together
+echo "curl execute";
 flush();
-socket_connect($sock,"201.80.136.226", 8081);
-echo "Connectado<br/>";
+$output = curl_exec($ch);
+echo "curl executado";
 flush();
-if(isset($_POST['submit'])) {
-    $msg = $_POST['submit'];
-    socket_write($sock,$msg,strlen($msg));
-}
+curl_close($ch);
+echo "curl close";
+flush();
+echo $output;
+flush();
 
-echo "<form method =\"post\" action=\"socket.php\">";
-echo "<button style=\"width:90;font: bold 14px Arial\" type = \"Submit\" Name = \"submit\" value='value?1'>ON</button></br></br>";
-echo "<button style=\"width:90;font: bold 14px Arial\" type = \"Submit\" Name = \"submit\" value='value?0'>OFF</button></br></br>";
-echo "</form>";
-socket_close($sock);
-?>
-</body>
-</html>

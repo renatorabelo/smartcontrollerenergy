@@ -28,24 +28,15 @@
                     <i class="icon-angle-right"></i>
                 </li>
                 <li><a href="#">Dispositivos</a></li>
-                <li class="pull-right no-text-shadow">
-                    <div id="dashboard-report-range"
-                         class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive"
-                         data-tablet=""
-                         data-desktop="tooltips" data-placement="top"
-                         data-original-title="Change dashboard date range">
-                        <i class="icon-calendar"></i>
-                        <span></span>
-                        <i class="icon-angle-down"></i>
-                    </div>
-                </li>
             </ul>
         </div>
     </div>
-
     <div id="dashboard">
         <div class="row-fluid">
             <div class="span2 responsive" data-tablet="span6" data-desktop="span2">
+                <script>
+                    Framework.verifyOnOff();
+                </script>
                 <div class="dashboard-stat blue">
                     <div class="visual">
                         <i class="icon-off"></i>
@@ -56,9 +47,8 @@
                             ON
                         </div>
                     </div>
-                    <a class="more" href="javascript: void(0);" onclick="Framework.requestOnOff($('.desc').text());">
-                        OFF <i class="m-icon-swapright m-icon-white"></i>
-                    </a>
+                    <a class="more" href="javascript: void(0);" onclick="Framework.requestOnOff($('.desc').text());">OFF</a>
+                    <div class="icone"><i class="m-icon-swapright m-icon-white"></i></div>
                 </div>
             </div>
         </div>
