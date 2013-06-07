@@ -15,7 +15,7 @@
     <file path="/a.dummy" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368936502810" ignored="false" />
     <file path="/bootstrap-responsive.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367094695223" ignored="false" />
     <file path="/intro.tpl.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367101877177" ignored="false" />
-    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370579630775" ignored="false" />
+    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370581945107" ignored="false" />
     <file path="/Application.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370118361846" ignored="false" />
     <file path="/pageIntro.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369595408960" ignored="false" />
     <file path="/metro.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367127386588" ignored="false" />
@@ -26,7 +26,7 @@
     <file path="/light.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187926169" ignored="false" />
     <file path="/blue.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187876425" ignored="false" />
     <file path="/purple.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187659156" ignored="false" />
-    <file path="/pageFooter.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370574793109" ignored="false" />
+    <file path="/pageFooter.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370581076547" ignored="false" />
     <file path="/brown.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187767000" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/html5/xhtml5.xsd" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368935127444" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xhtml1-transitional.xsd" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368935127444" ignored="false" />
@@ -56,7 +56,7 @@
     <file path="/pageDashboard.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368981935533" ignored="false" />
     <file path="/pageUser.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370101005253" ignored="false" />
     <file path="/socket.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370149117220" ignored="false" />
-    <file path="/pageDashboard.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370578645527" ignored="false" />
+    <file path="/pageDashboard.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370581320908" ignored="false" />
     <file path="/pageSobre.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369956019281" ignored="false" />
     <file path="/socketserver.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369522562645" ignored="false" />
     <file path="/pageDisp.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370143264966" ignored="false" />
@@ -95,19 +95,8 @@
       <file leaf-file-name="util.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="257" column="24" selection-start="7983" selection-end="7983" vertical-scroll-proportion="0.76632303">
+            <state line="279" column="104" selection-start="8719" selection-end="8719" vertical-scroll-proportion="0.43528065">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.flot.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/jquery.flot.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="3" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +113,7 @@
       <file leaf-file-name="pageFooter.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="71" selection-start="270" selection-end="270" vertical-scroll-proportion="-1.9615384">
+            <state line="6" column="68" selection-start="517" selection-end="517" vertical-scroll-proportion="-3.9230769">
               <folding />
             </state>
           </provider>
@@ -133,7 +122,7 @@
       <file leaf-file-name="pageDashboard.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageDashboard.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="16" selection-start="3224" selection-end="3224" vertical-scroll-proportion="-28.653847">
+            <state line="66" column="48" selection-start="3066" selection-end="3075" vertical-scroll-proportion="-22.115385">
               <folding />
             </state>
           </provider>
@@ -142,7 +131,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3830" column="18" selection-start="68472" selection-end="68472" vertical-scroll-proportion="0.0">
+            <state line="3826" column="1" selection-start="68431" selection-end="68431" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -180,8 +169,8 @@
         <option value="$PROJECT_DIR$/public/js/jquery.flot.crosshair.min.js" />
         <option value="$PROJECT_DIR$/public/js/jquery.flot.min.js" />
         <option value="$PROJECT_DIR$/public/pageFooter.tpl.html" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/pageDashboard.tpl.html" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/js/util.js" />
       </list>
     </option>
@@ -326,14 +315,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="Configurable.PHP" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.lastSelected" value="Configurable.PHP" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -353,10 +342,10 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
       <method />
     </configuration>
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
       <method />
     </configuration>
-    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
@@ -369,14 +358,14 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -413,11 +402,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20811099" sideWeight="0.6718576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21024546" sideWeight="0.6718576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39822024" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -426,6 +414,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -507,6 +496,13 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/pageDisp.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="26" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -521,7 +517,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="48" selection-start="6768" selection-end="6768" vertical-scroll-proportion="-0.02361275">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -550,41 +546,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="71" selection-start="270" selection-end="270" vertical-scroll-proportion="-1.9615384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="291" column="8" selection-start="10145" selection-end="10145" vertical-scroll-proportion="0.33333334">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/jquery.flot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="3" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/pageHeader.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="481" selection-end="481" vertical-scroll-proportion="-5.8846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3830" column="18" selection-start="68472" selection-end="68472" vertical-scroll-proportion="0.0">
+        <state line="30" column="3" selection-start="926" selection-end="926" vertical-scroll-proportion="0.019767443">
           <folding />
         </state>
       </provider>
@@ -596,16 +569,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageHeader.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="481" selection-end="481" vertical-scroll-proportion="-5.8846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="68" selection-start="517" selection-end="517" vertical-scroll-proportion="-3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3826" column="1" selection-start="68431" selection-end="68431" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/pageDashboard.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="16" selection-start="3224" selection-end="3224" vertical-scroll-proportion="-28.653847">
+        <state line="66" column="48" selection-start="3066" selection-end="3075" vertical-scroll-proportion="-22.115385">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="257" column="24" selection-start="7983" selection-end="7983" vertical-scroll-proportion="0.76632303">
+        <state line="279" column="104" selection-start="8719" selection-end="8719" vertical-scroll-proportion="0.43528065">
           <folding />
         </state>
       </provider>

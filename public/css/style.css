@@ -3817,7 +3817,7 @@ Box portlet
     border-top: 0;
 }
 
-.chart #chartTracking {
+.chart #chartTracking #chartPie #chartBars{
     overflow: hidden;
     height: 300px;
 }
@@ -3825,12 +3825,6 @@ Box portlet
 #chartTracking .legendLabel {
     width: 150px;
 }
-
-.chart #chartPie {
-    overflow: hidden;
-    height: 300px;
-}
-
 
 #ajaxdiv {
     position: absolute;

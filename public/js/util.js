@@ -271,7 +271,33 @@ var Charts = {
         });
     },
     chartPie : function() {
+    },
+    chartBars : function() {
+
+        var formatAxis = function(x) {
+            return x.toFixed(2) + '%';
+        }
+        var data = [ ["Janeiro", 4.0], ["Fevereiro", 5.00], ["Março", 5.70], ["Abril", 2.11], ["Maio", 1.00], ["Junho", 4.24], ["Julho", 5.75], ["Agosto", 6.14]];
+        $.plot("#chartBars", [ data ], {
+            series: {
+                bars: {
+                    show: true,
+                    barWidth: 0.6,
+                    align: "center"
+                }
+            },
+            xaxis: {
+                mode: "categories",
+                tickLength: 0
+            },
+            yaxis: {
+                tickSize: 0.7,
+                tickDecimals: 2,
+                tickFormatter: formatAxis
+            }
+        });
     }
+
 };
 
 jQuery(document).ready(function () {
