@@ -159,6 +159,118 @@ var Framework = {
                 $('head').append('<link href="public/css/themes/' + color + '.css" rel="stylesheet" id="style_theme" />');
             }
         }
+    },
+    _handlePortlets: function() {
+        jQuery('.portlet .tools .collapse, .portlet .tools .expand').click('click', function () {
+            var el = jQuery(this).parents(".portlet").children(".portlet-body");
+            if (jQuery(this).hasClass("collapse")) {
+                jQuery(this).removeClass("collapse").addClass("expand");
+                el.slideUp(200);
+            } else {
+                jQuery(this).removeClass("expand").addClass("collapse");
+                el.slideDown(200);
+            }
+        });
+    }
+};
+
+var Charts = {
+    chartTracking: function () {
+        var mes = [];
+        mes.push([0, 0]);
+        mes.push([30, 163]);
+        mes.push([60, 145]);
+        mes.push([90, 156]);
+        mes.push([120,118]);
+        mes.push([150,165]);
+        mes.push([180,123]);
+        mes.push([210,170]);
+        mes.push([230,144]);
+        mes.push([260,153]);
+
+        var plot = $.plot("#chartTracking",[
+            { data: mes, label: "Consumo kWh = 0.00"}]
+        , {
+            series: {
+                lines: {
+                    show: true
+                }
+            },
+            crosshair: {
+                mode: "x"
+            },
+            grid: {
+                hoverable: true,
+                autoHighlight: false
+            },
+            background: {
+                opacity: 0.8
+            },
+            xaxis: {
+              tickSize: 30
+            },
+            yaxis: {
+                tickSize: 15
+            }
+
+        });
+
+        var legends = $("#chartTracking .legendLabel");
+
+        legends.each(function () {
+            $(this).css('width', $(this).width());
+        });
+
+        var updateLegendTimeout = null;
+        var latestPosition = null;
+
+        function updateLegend() {
+
+            updateLegendTimeout = null;
+
+            var pos = latestPosition;
+
+            var axes = plot.getAxes();
+            if (pos.x < axes.xaxis.min || pos.x > axes.xaxis.max ||
+                pos.y < axes.yaxis.min || pos.y > axes.yaxis.max) {
+                return;
+            }
+
+            var i, j, dataset = plot.getData();
+            for (i = 0; i < dataset.length; ++i) {
+
+                var series = dataset[i];
+
+                for (j = 0; j < series.data.length; ++j) {
+                    if (series.data[j][0] > pos.x) {
+                        break;
+                    }
+                }
+
+                var y,
+                    p1 = series.data[j - 1],
+                    p2 = series.data[j];
+
+                if (p1 == null) {
+                    y = p2[1];
+                } else if (p2 == null) {
+                    y = p1[1];
+                } else {
+                    y = p1[1] + (p2[1] - p1[1]) * (Math.ceil(pos.x) - p1[0]) / (p2[0] - p1[0]);
+                }
+
+                legends.eq(i).text(series.label.replace(/=.*/, "= " + y.toFixed(2)));
+            }
+        }
+
+        $("#chartTracking").bind("plothover",  function (event, pos, item) {
+            latestPosition = pos;
+            if (!updateLegendTimeout) {
+                updateLegendTimeout = setTimeout(updateLegend, 50);
+            }
+        });
+    },
+    chartPie : function() {
     }
 };
 

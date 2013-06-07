@@ -10,12 +10,12 @@
     <file path="/Configuration.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1365385750311" ignored="false" />
     <file path="/Querys.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1365386873584" ignored="false" />
     <file path="/index.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368949209495" ignored="false" />
-    <file path="/style.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370121311870" ignored="false" />
+    <file path="/style.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370578288563" ignored="false" />
     <file path="/login.tpl.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367093980815" ignored="false" />
     <file path="/a.dummy" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368936502810" ignored="false" />
     <file path="/bootstrap-responsive.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367094695223" ignored="false" />
     <file path="/intro.tpl.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367101877177" ignored="false" />
-    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370201499902" ignored="false" />
+    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370579630775" ignored="false" />
     <file path="/Application.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370118361846" ignored="false" />
     <file path="/pageIntro.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369595408960" ignored="false" />
     <file path="/metro.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367127386588" ignored="false" />
@@ -26,7 +26,7 @@
     <file path="/light.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187926169" ignored="false" />
     <file path="/blue.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187876425" ignored="false" />
     <file path="/purple.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187659156" ignored="false" />
-    <file path="/pageFooter.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369957497293" ignored="false" />
+    <file path="/pageFooter.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370574793109" ignored="false" />
     <file path="/brown.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187767000" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/html5/xhtml5.xsd" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368935127444" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xhtml1-transitional.xsd" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368935127444" ignored="false" />
@@ -56,7 +56,7 @@
     <file path="/pageDashboard.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368981935533" ignored="false" />
     <file path="/pageUser.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370101005253" ignored="false" />
     <file path="/socket.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370149117220" ignored="false" />
-    <file path="/pageDashboard.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369504972707" ignored="false" />
+    <file path="/pageDashboard.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370578645527" ignored="false" />
     <file path="/pageSobre.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369956019281" ignored="false" />
     <file path="/socketserver.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369522562645" ignored="false" />
     <file path="/pageDisp.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370143264966" ignored="false" />
@@ -86,7 +86,7 @@
       <file leaf-file-name="Application.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="44" selection-start="2390" selection-end="2416" vertical-scroll-proportion="-26.692308">
+            <state line="52" column="44" selection-start="2390" selection-end="2416" vertical-scroll-proportion="-18.846153">
               <folding />
             </state>
           </provider>
@@ -95,8 +95,19 @@
       <file leaf-file-name="util.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="39" selection-start="928" selection-end="928" vertical-scroll-proportion="0.66208476">
+            <state line="257" column="24" selection-start="7983" selection-end="7983" vertical-scroll-proportion="0.76632303">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.flot.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/jquery.flot.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="3" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,7 +115,34 @@
       <file leaf-file-name="pageHeader.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageHeader.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="71" selection-start="94" selection-end="94" vertical-scroll-proportion="-1.3076923">
+            <state line="9" column="36" selection-start="481" selection-end="481" vertical-scroll-proportion="-5.8846154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageFooter.tpl.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="71" selection-start="270" selection-end="270" vertical-scroll-proportion="-1.9615384">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageDashboard.tpl.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/pageDashboard.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="16" selection-start="3224" selection-end="3224" vertical-scroll-proportion="-28.653847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3830" column="18" selection-start="68472" selection-end="68472" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,7 +151,7 @@
       <file leaf-file-name="pageDisp.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageDisp.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="26" selection-start="1814" selection-end="1814" vertical-scroll-proportion="-22.115385">
+            <state line="42" column="26" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -129,21 +167,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/public/css/bootstrap-fileupload.css" />
-        <option value="$PROJECT_DIR$/public/js/bootstrap-fileupload.js" />
-        <option value="$PROJECT_DIR$/public/pageFooter.tpl.html" />
-        <option value="$PROJECT_DIR$/public/pageFooterIntro.tpl.html" />
         <option value="$PROJECT_DIR$/public/pageUser.tpl.html" />
         <option value="$PROJECT_DIR$/chatbox/server.php" />
         <option value="$PROJECT_DIR$/chatbox/main.js" />
         <option value="$PROJECT_DIR$/library/PHPTelnet.php" />
         <option value="$PROJECT_DIR$/library/socket2.php" />
         <option value="$PROJECT_DIR$/library/Application.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/pageHeader.tpl.html" />
         <option value="$PROJECT_DIR$/library/socket.php" />
         <option value="$PROJECT_DIR$/public/pageDisp.tpl.html" />
+        <option value="$PROJECT_DIR$/public/js/jquery.js" />
+        <option value="$PROJECT_DIR$/public/js/jquery.flot.crosshair.min.js" />
+        <option value="$PROJECT_DIR$/public/js/jquery.flot.min.js" />
+        <option value="$PROJECT_DIR$/public/pageFooter.tpl.html" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/pageDashboard.tpl.html" />
         <option value="$PROJECT_DIR$/public/js/util.js" />
       </list>
     </option>
@@ -258,6 +296,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartcontrollenergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartcontrollerenergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -357,10 +413,11 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20384204" sideWeight="0.60177976" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20811099" sideWeight="0.6718576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39822024" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -369,7 +426,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -451,36 +507,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/pageLogin.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="56" selection-start="274" selection-end="274" vertical-scroll-proportion="0.14049587" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/pageIntro.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="48" selection-start="2824" selection-end="2824" vertical-scroll-proportion="0.5985832" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/sockets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="530" column="9" selection-start="19317" selection-end="19317" vertical-scroll-proportion="0.58441556" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_6.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1013" column="9" selection-start="33319" selection-end="33319" vertical-scroll-proportion="0.34969324" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_7.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="9" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.34969324" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="24" selection-start="3784" selection-end="3784" vertical-scroll-proportion="2.5855963" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -500,13 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1830" column="20" selection-start="33446" selection-end="33446" vertical-scroll-proportion="0.64490265">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/AJAX.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="429" selection-end="429" vertical-scroll-proportion="0.33333334" />
@@ -517,30 +536,76 @@
         <state line="4" column="42" selection-start="218" selection-end="218" vertical-scroll-proportion="0.08028335" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Application.php">
+    <entry file="file://$PROJECT_DIR$/public/pageDisp.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="44" selection-start="2390" selection-end="2416" vertical-scroll-proportion="-26.692308">
+        <state line="42" column="26" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="799" column="17" selection-start="12318" selection-end="12318" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="71" selection-start="270" selection-end="270" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="291" column="8" selection-start="10145" selection-end="10145" vertical-scroll-proportion="0.33333334">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.flot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="3" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageHeader.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="71" selection-start="94" selection-end="94" vertical-scroll-proportion="-1.3076923">
+        <state line="9" column="36" selection-start="481" selection-end="481" vertical-scroll-proportion="-5.8846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/pageDisp.tpl.html">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="26" selection-start="1814" selection-end="1814" vertical-scroll-proportion="-22.115385">
+        <state line="3830" column="18" selection-start="68472" selection-end="68472" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="44" selection-start="2390" selection-end="2416" vertical-scroll-proportion="-18.846153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageDashboard.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="16" selection-start="3224" selection-end="3224" vertical-scroll-proportion="-28.653847">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="39" selection-start="928" selection-end="928" vertical-scroll-proportion="0.66208476">
+        <state line="257" column="24" selection-start="7983" selection-end="7983" vertical-scroll-proportion="0.76632303">
           <folding />
         </state>
       </provider>

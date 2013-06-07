@@ -42,5 +42,36 @@
             </ul>
             <!-- END PAGE TITLE & BREADCRUMB-->
         </div>
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-reorder"></i>Consumo mensal por dia em kWh</div>
+                <div class="tools">
+                    <a href="javascript: void(0);" class="collapse"></a>
+                    <a href="javascript: void(0);" class="reload"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="chart" id="chartTracking">
+                </div>
+            </div>
+        </div>
+        <div class="portlet box green">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-reorder"></i>Consumo mensal em %</div>
+                <div class="tools">
+                    <a href="javascript: void(0);" class="collapse"></a>
+                    <a href="javascript: void(0);" class="reload"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="chart" id="chartPie">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<script>
+    Framework._handlePortlets();
+    Charts.chartTracking();
+    Charts.chartPie();
+</script>
