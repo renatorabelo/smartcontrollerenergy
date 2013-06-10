@@ -8,29 +8,31 @@
  */
 
 namespace StoredLibrary;
+use StoredLibrary\Configuration as Configuration;
 
 
 class Connection {
 
     private static $instance = null;
-    private static $_PDOInstance = null;
-    private $_query = null;
+    private $_PDOInstance = null;
+    private $query = null;
 
     public function __construct()
     {
-        if(!self::$_PDOInstance)
+        if(!isset($this->_PDOInstance))
         {
             try {
-                $arrayConfigs = \StoredLibrary\Configuration::get(__DIR__.'/../application.ini');
+                $arrayConfigs = Configuration::get(__DIR__.'/../application.ini');
                 $dsn = $arrayConfigs['database']['adapter'].":host=".$arrayConfigs['database']['host'].";dbname=".$arrayConfigs['database']['dbname'];
-                self::$_PDOInstance = new \PDO($dsn, $arrayConfigs['database']['username'], $arrayConfigs['database']['password']);
-            } catch (PDOException $e) {
+                $this->_PDOInstance = new \PDO($dsn, $arrayConfigs['database']['username'], $arrayConfigs['database']['password']);
+                $this->_PDOInstance->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+            } catch (\PDOException $e) {
                 throw new \Exception("PDO Connection error: " . $e->getMessage() . "<br/>");
             }
+        } else {
+            return $this->_PDOInstance;
         }
-        return self::$_PDOInstance;
     }
-
     public static function getInstance() {
         if(!isset($instance)) {
             self::$instance = new self();
@@ -40,44 +42,66 @@ class Connection {
 
     public function beginTransaction()
     {
-        return self::$_PDOInstance->beginTransaction();
+        return $this->_PDOInstance->beginTransaction();
     }
 
 
     public function commit()
     {
-        return self::$_PDOInstance->commit();
+        return $this->_PDOInstance->commit();
     }
 
     public function rollBack()
     {
-        return self::$_PDOInstance->rollBack();
+        return $this->_PDOInstance->rollBack();
     }
 
     public function exec($statement)
     {
-        try {
-            return self::$_PDOInstance->exec($statement);
-        } catch(\PDOException $e) {
-            throw $e;
+        $preparedSQL = $this->_PDOInstance->prepare($statement);
+        $preparedSQL->execute();
+        return $preparedSQL;
+    }
+
+    public function fetchAll($statement = "")
+    {
+        if(!empty($statement)) {
+            $query = $this->exec($statement);
+            return $query->fetchAll(\PDO::FETCH_ASSOC);
+        } else {
+            $query = $this->exec($this->query);
+            return $query->fetchAll(\PDO::FETCH_ASSOC);
         }
     }
 
-    public function fetchAll($statement)
+    public function fetchObject($statement = "")
     {
-        return self::$_PDOInstance->query($statement)->fetchAll(PDO::FETCH_ASSOC);
+        if(!empty($statement)) {
+            $query = $this->exec($statement);
+            return $query->fetch(\PDO::FETCH_OBJ);
+        } else {
+            $query = $this->exec($this->query);
+            return $query->fetch(\PDO::FETCH_OBJ);
+        }
     }
 
-    public function fetchRow($statement)
+
+    public function fetchRow($statement = "")
     {
-        return self::$_PDOInstance->query($statement)->fetch(PDO::FETCH_ASSOC);
+        if(!empty($statement)) {
+            $query = $this->exec($statement);
+            return $query->fetch(\PDO::FETCH_ASSOC);
+        } else {
+            $query = $this->exec($this->query);
+            return $query->fetch(\PDO::FETCH_ASSOC);
+        }
     }
 
     public function insert($name, array $data)
     {
         $statement = "INSERT INTO " . $name . "(" .implode(",", array_map("mysql_escape_string", array_keys($data))) . ")
                            VALUES ('" . implode("', '", array_map("mysql_escape_string", array_values($data))) . "');";
-        self::$_PDOInstance->exec($statement);
+        return $this->exec($statement)->rowCount();
     }
 
     public function update($name, array $data, $where)
@@ -89,17 +113,17 @@ class Connection {
             $quote = ",";
         }
         $statement .= " WHERE " . $where;
-        self::$_PDOInstance->exec($statement);
+        return $this->exec($statement)->rowCount();
     }
 
     public function delete($name, $where)
     {
         $statement = "DELETE FROM " . $name . " WHERE " . $where;
-        self::$_PDOInstance->exec($statement);
+        return $this->exec($statement)->rowCount();
     }
 
     public function select() {
-        $this->_query = "SELECT ";
+        $this->query = "SELECT ";
         return $this;
     }
 

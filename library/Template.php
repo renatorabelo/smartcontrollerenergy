@@ -4,28 +4,51 @@ namespace StoredLibrary;
 
 class Template {
 
-    protected $file;
-    protected $values = array();
+    private $file;
+    private $values = array();
+    private static $_instance = null;
 
-    public function __construct($file) {
+    public function setFile($file) {
         $this->file = $file;
     }
 
-    public function __set($key, $value) {
-        $this->values[$key] = $value;
-    }
-
-    public function __get($key) {
-        return $this->values[$key];
-    }
-
-    public function display() {
-        if (!file_exists($this->file)) {
-            throw new \Exception("Error loading template file ($this->file).<br />");
+    public function _set($data) {
+        foreach($data as $key => $value) {
+            $this->values[$key] = $value;
         }
-        $output = file_get_contents($this->file);
+    }
 
-        foreach ($this->values as $key => $value) {
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    public function getValues()
+    {
+        return $this->values;
+    }
+
+    public static function getInstance() {
+        if(!isset($_instance)) {
+            self::$_instance = new self();
+        }
+        return self::$_instance;
+    }
+
+    public static function display($file, $arraySettings = '') {
+        $tpl = Template::getInstance();
+        if(!empty($file)) {
+            $tpl->setFile($file);
+            if(!empty($arraySettings)) {
+                $tpl->_set($arraySettings);
+            }
+        }
+        if (!file_exists($tpl->getFile())) {
+            throw new \Exception("Error loading template file ". $tpl->getFile());
+        }
+        $output = file_get_contents($tpl->getFile());
+
+        foreach ($tpl->getValues() as $key => $value) {
             $tagToReplace = "[@$key]";
             $output = str_replace($tagToReplace, $value, $output);
         }

@@ -44,6 +44,7 @@ public class HouseActivity extends Activity {
                 public void onLoadResource (WebView view, String url) {
                     if (moduleLoading == null) {
                         moduleLoading = new ProgressDialog(context);
+                        moduleLoading.setCancelable(false);
                         moduleLoading.setMessage("Inicializando módulos..");
                         moduleLoading.show();
                         view.setEnabled(false);

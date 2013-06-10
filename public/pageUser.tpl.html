@@ -53,12 +53,14 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane profile-classic row-fluid active" id="TabResumo">
-                        <div class="span2"><img src="public/img/foto.jpg" alt=""></div>
+                        <div class="span2"><img src="[@PHOTO]" alt=""></div>
                         <ul class="unstyled span10">
-                            <li><span>Nome:</span> Kessiler</li>
-                            <li><span>Email:</span> <a href="#">kessiler@kessiler.com</a></li>
-                            <li><span>IP do Arduino:</span>192.168.0.1</li>
-                            <li><span>Status do serviço:</span><font color="green"><b>Online</b></font></li>
+                            <li><span>Nome:</span> [@NAME]</li>
+                            <li><span>Sobrenome:</span> [@LASTNAME]</li>
+                            <li><span>Login:</span> [@LOGIN]</li>
+                            <li><span>Email:</span> [@MAIL]</li>
+                            <li><span>IP do Arduino:</span> [@ARDUINOIP]</li>
+                            <li><span>Porta do Arduino:</span> [@ARDUINOPORT]</li>
                         </ul>
                     </div>
                     <div class="tab-pane row-fluid profile-account" id="TabConfig">
@@ -82,17 +84,33 @@
                                     <div class="tab-content">
                                         <div id="tab_1-1" class="tab-pane active">
                                             <div style="height: auto;" id="accordion1-1" class="accordion collapse in">
-                                                <form action="#">
-                                                    <label class="control-label">Nome</label>
-                                                    <input type="text" placeholder="Kessiler" class="m-wrap span8">
-                                                    <label class="control-label">Consumo médio diário</label>
-                                                    <input type="text" placeholder="Kessiler" class="m-wrap span8">
-                                                    <label class="control-label">Consumo médio mensal</label>
-                                                    <input type="text" placeholder="Kessiler" class="m-wrap span8">
-                                                    <label class="control-label">WebSite</label>
-                                                    <input type="text" placeholder="http://www.kessiler.com" class="m-wrap span8">
+                                                <form id="userInfo" action="#">
+                                                    <div class="control-group">
+                                                        <label class="control-label">Nome<span class="required">*</span></label>
+                                                        <div class="controls">
+                                                            <input type="text" placeholder="[@NAME]" name="name" class="m-wrap span8">
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">Sobrenome</label>
+                                                        <div class="controls">
+                                                            <input type="text" placeholder="[@LASTNAME]" name="lastname"  class="m-wrap span8">
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">Login<span class="required">*</span></label>
+                                                        <div class="controls">
+                                                            <input type="text" placeholder="[@LOGIN]" name="login" class="m-wrap span8">
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">Email</label>
+                                                        <div class="controls">
+                                                            <input type="text" placeholder="[@MAIL]" name="email"  class="m-wrap span8">
+                                                        </div>
+                                                    </div>
                                                     <div class="submit-btn">
-                                                        <a href="#" class="btn green">Salvar alterações</a>
+                                                        <button type="submit" class="btn green" data-toggle="modal"><i class="icon-ok"></i> Salvar alterações</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -102,7 +120,7 @@
                                                 <form action="#">
                                                     <div class="controls">
                                                         <div class="thumbnail" style="width: 291px; height: 170px;">
-                                                            <img src="public/img/no-image.gif" alt="">
+                                                            <img src="[@PHOTO]" alt="">
                                                         </div>
                                                     </div>
                                                     <div class="space10"></div>
@@ -119,7 +137,7 @@
                                                             <a href="#" class="btn btn-file" data-dismiss="fileupload">Remover</a>
                                                             <div class="space10"></div>
                                                             <div class="submit-btn">
-                                                                <a href="#" class="btn green">Salvar alterações</a>
+                                                                <a href="#" class="btn green" data-toggle="modal"><i class="icon-ok"></i> Salvar alterações</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -137,19 +155,31 @@
                                                     <input type="password" class="m-wrap span8">
 
                                                     <div class="submit-btn">
-                                                        <a href="#" class="btn green">Alterar Senha </a>
+                                                        <a href="#myModal3" class="btn btn-warning green" data-toggle="modal"><i class="icon-ok"></i> Alterar Senha </a>
                                                     </div>
                                                 </form>
                                             </div>
                                         </div>
                                         <div id="tab_4-4" class="tab-pane">
-                                            <div style="height: auto;" id="accordion4-4" class="accordion collapse in">
-                                                <label class="control-label">IP Arduino:</label>
-                                                <input type="text" placeholder="192.168.0.1" class="m-wrap span8">
-                                                <div class="space5"></div>
-                                                <div class="submit-btn">
-                                                    <a href="#" class="btn green">Salvar alterações</a>
+                                            <form id="arduinoform" onsubmit="return false;">
+                                                <div style="height: auto;" id="accordion4-4" class="accordion collapse in">
+                                                    <label class="control-label">IP Arduino:</label>
+                                                    <input type="text" name="ipArduino" placeholder="[@ARDUINOIP]" class="m-wrap span8">
+                                                    <label class="contron-label">Porta Arduino:</label>
+                                                    <input type="text" name="portaArduino" placeholder="[@ARDUINOPORT]" class="m-wrap span8">
+                                                    <div class="space5"></div>
+                                                    <div class="submit-btn">
+                                                        <button type="submit" class="btn green" onclick="Framework.formArdRequest();"><i class="icon-ok"></i> Salvar alterações</button>
+                                                    </div>
                                                 </div>
+                                            </form>
+                                            <div class="alert alert-success hide" id="sucessArdID">
+                                                <button class="close" data-dismiss="alert"></button>
+                                                Alteração realizada com sucesso!
+                                            </div>
+                                            <div class="alert alert-error hide" id="errorArdID">
+                                                <button class="close" data-dismiss="alert"></button>
+                                                Ocorreu um erro ao salvar os dados no servidor!
                                             </div>
                                         </div>
                                     </div>

@@ -1,10 +1,12 @@
 <?php
 
 namespace StoredLibrary;
+use \StoredLibrary;
 
 class Application
 {
     private static $_instance = null;
+    private $Login = null;
 
     public static function getInstance() {
         if(!isset($_instance)) {
@@ -13,56 +15,88 @@ class Application
         return self::$_instance;
     }
 
+    public function __construct() {
+        if(!isset($this->Login)) {
+            $this->Login = Login::getInstance();
+        }
+    }
+
     public function run()
     {
-        if (isset($_POST['action'])) {
-            $template = new \StoredLibrary\Template(__DIR__.'/../public/pageHeader.tpl.html');
-            $template->__set('TITLE_PAGE', 'House Economic');
-            $template->__set("CSSPATH", "public/css/");
-            $layout   = new \StoredLibrary\Template(__DIR__.'/../public/pageIntro.tpl.html');
-            $layout->__set('HEADER', $template->display());
-            $template = new \StoredLibrary\Template(__DIR__.'/../public/pageFooterIntro.tpl.html');
-            $layout->__set("FOOTERINTRO", $template->display());
-            $template = new \StoredLibrary\Template(__DIR__.'/../public/pageFooter.tpl.html');
-            $template->__set("JSPATH", "public/js/");
-            $layout->__set('FOOTER', $template->display());
-            echo $layout->display();
-        } elseif(isset($_GET['action'])) {
-            switch($_GET['action']) {
-                case 'loadWindow':
-                    switch(json_decode($_GET['dataset'])){
-                        case 'pageDashboard':
-                            $template = new \StoredLibrary\Template(__DIR__.'/../public/pageDashboard.tpl.html');
-                            echo $template->display();
-                            break;
-                        case 'pageUser':
-                            $template = new \StoredLibrary\Template(__DIR__.'/../public/pageUser.tpl.html');
-                            echo $template->display();
-                            break;
-                        case 'pageSobre':
-                            $template = new \StoredLibrary\Template(__DIR__.'/../public/pageSobre.tpl.html');
-                            echo $template->display();
-                            break;
-                        case 'pageDisp':
-                            $template = new \StoredLibrary\Template(__DIR__.'/../public/pageDisp.tpl.html');
-                            echo $template->display();
-                            break;
-                        default: break;
-                    }
-                    break;
-                case 'loadIpArduino': echo "http://201.80.136.226:8081"; break;
+        try {
+            if (isset($_POST['action'])) {
+                switch($_POST['action']) {
+                    case 'logar':
+                        echo $this->Login->start(array('username' => $_POST['username'], 'password' => $_POST['password']));
+                        break;
+                    case 'logout':
+                        echo $this->Login->logout();
+                        break;
+                    case 'ipArduinoSave':
+                        $value = json_decode($_POST['dataset']);
+                        echo Util::getInstance()->saveArduino($value, $this->Login->sessionUserName());
+                        break;
+                }
+            } elseif(isset($_GET['action'])) {
+                switch($_GET['action']) {
+                    case 'loadWindow':
+                        switch(json_decode($_GET['dataset'])){
+                            case 'pageDashboard':
+                                echo Template::display(TEMPLATE_DIR.'pageDashboard.tpl.html');
+                                break;
+                            case 'pageUser':
+                                $DadosUser = Util::getInstance()->dadosUser($this->Login->sessionUserName());
+                                $configsPageUser = array(
+                                    'NAME' => $DadosUser->userName,
+                                    'LASTNAME' => $DadosUser->userLastName,
+                                    'LOGIN' => $DadosUser->userLogin,
+                                    'MAIL' => $DadosUser->userMail,
+                                    'PHOTO' => Util::getInstance()->loadURLImage($DadosUser->userPhoto),
+                                    'ARDUINOIP' => $DadosUser->userArduinoIp,
+                                    'ARDUINOPORT' => $DadosUser->userArduinoPort
+                                );
+                                echo Template::display(TEMPLATE_DIR.'pageUser.tpl.html', $configsPageUser);
+                                break;
+                            case 'pageSobre':
+                                echo Template::display(TEMPLATE_DIR.'pageSobre.tpl.html');
+                                break;
+                            case 'pageDisp':
+                                echo Template::display(TEMPLATE_DIR.'pageDisp.tpl.html');
+                                break;
+                            default: break;
+                        }
+                        break;
+                    case 'loadIpArduino':
+                        $endeIP = Util::getInstance()->loadIpArduino($this->Login->sessionUserName());
+                        if(!strpos($endeIP,'http://')) {
+                            $endeIP = 'http://'.$endeIP;
+                        }
+                        echo $endeIP;
+                        break;
+                }
+            }else {
+                if($this->Login->sessionExists()) {
+                    $configsTpl = array(
+                        'HEADER' => Template::display(TEMPLATE_DIR.'pageHeader.tpl.html',
+                            array('TITLE_PAGE' => TITLE_PAGE,
+                                'CSSPATH' => CSSPATH)),
+                        'FOOTERINTRO' => Template::display(TEMPLATE_DIR.'pageFooterIntro.tpl.html'),
+                        'FOOTER' => Template::display(TEMPLATE_DIR.'pageFooter.tpl.html', array('JSPATH'  => JSPATH)),
+                    );
+                    echo Template::display(TEMPLATE_DIR.'pageIntro.tpl.html', $configsTpl);
+                } else {
+                    $configsTpl = array(
+                        'HEADER' => Template::display(TEMPLATE_DIR.'pageHeader.tpl.html',
+                                                        array('TITLE_PAGE' => TITLE_PAGE,
+                                                              'CSSPATH' => CSSPATH)),
+                        'FOOTER' => Template::display(TEMPLATE_DIR.'pageFooter.tpl.html', array('JSPATH'  => JSPATH)),
+                        'HIDE'   => 'hide'
+                    );
+                    echo Template::display(TEMPLATE_DIR.'pageLogin.tpl.html', $configsTpl);
+                }
             }
-
-        }else {
-            $template = new \StoredLibrary\Template(__DIR__.'/../public/pageHeader.tpl.html');
-            $template->__set('TITLE_PAGE', 'House Economic');
-            $template->__set("CSSPATH", "public/css/");
-            $layout   = new \StoredLibrary\Template(__DIR__.'/../public/pageLogin.tpl.html');
-            $layout->__set('HEADER', $template->display());
-            $template = new \StoredLibrary\Template(__DIR__.'/../public/pageFooter.tpl.html');
-            $template->__set("JSPATH", "public/js/");
-            $layout->__set('FOOTER', $template->display());
-            echo $layout->display();
+        }catch (\Exception $e) {
+            throw $e;
         }
     }
 }

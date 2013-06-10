@@ -33,22 +33,45 @@
     </div>
     <div id="dashboard">
         <div class="row-fluid">
-            <div class="span2 responsive" data-tablet="span6" data-desktop="span2">
-                <script>
-                    Framework.verifyOnOff();
-                </script>
-                <div class="dashboard-stat blue">
-                    <div class="visual">
-                        <i class="icon-off"></i>
+            <div class="span12 responsive" data-tablet="span6" data-desktop="span12">
+                <div class="tile bg-yellow" id="tilebgYellow" onclick="Framework.requestOnOff($('#tilebgYellow .tile-object .number').text())">
+                    <div class="tile-body">
+                        <i class="icon-lightbulb"></i>
                     </div>
-                    <div class="details">
-                        <div class="number">Led</div>
-                        <div class="desc">
+                    <div class="tile-object">
+                        <div class="name">
+                            Lâmpada - Quarto
+                        </div>
+                        <div class="number">
                             ON
                         </div>
                     </div>
-                    <a class="more" href="javascript: void(0);" onclick="Framework.requestOnOff($('.desc').text());">OFF</a>
-                    <div class="icone"><i class="m-icon-swapright m-icon-white"></i></div>
+                </div>
+                <div class="tile bg-blue" id="tilebgBlue" onclick="Framework.requestOnOff($('#tilebgBlue .tile-object .number').text())">
+                    <div class="tile-body">
+                        <i class="icon-lightbulb"></i>
+                    </div>
+                    <div class="tile-object">
+                        <div class="name">
+                            Lâmpada - Sala
+                        </div>
+                        <div class="number">
+                            ON
+                        </div>
+                    </div>
+                </div>
+                <div class="tile bg-green" id="tilebgGreen" onclick="Framework.requestOnOff($('#tilebgGreen .tile-object .number').text())">
+                    <div class="tile-body">
+                        <i class="icon-lightbulb"></i>
+                    </div>
+                    <div class="tile-object">
+                        <div class="name">
+                            Lâmpada - Cozinha
+                        </div>
+                        <div class="number">
+                            ON
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

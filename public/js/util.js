@@ -32,13 +32,11 @@ var Framework = {
         if(Framework.requestArduino(state)) {
             if(state == '0')
             {
-                $(".dashboard-stat .desc").empty().append('OFF');
-                $(".dashboard-stat .more").empty().append('ON');
-                $(".dashboard-stat").fadeTo(1000, 0.4);
+                $("#tilebgYellow .number").empty().append('OFF');
+                $("#tilebgYellow").fadeTo(1000, 0.4);
             } else {
-                $(".dashboard-stat .desc").empty().append('ON');
-                $(".dashboard-stat .more").empty().append('OFF');
-                $(".dashboard-stat").fadeTo(1000, 1.0);
+                $("#tilebgYellow .number").empty().append('ON');
+                $("#tilebgYellow").fadeTo(1000, 1.0);
             }
         }
     },
@@ -48,7 +46,10 @@ var Framework = {
                 type: 'GET',
                 url: response,
                 data: data,
-                timeout: 3000
+                timeout: 3000,
+                error: function(error) {
+                    console.error(error);
+                }
             });
         });
         return true;
@@ -75,7 +76,7 @@ var Framework = {
                 responseHandler(response);
             },
             error: function (error) {
-                console.log(error);
+                console.error(error);
             },
             complete: function () {
                 if(loading) $('#modalback').remove();
@@ -91,6 +92,7 @@ var Framework = {
     init: function () {
         this._handleSidebar();
         this._handleGoTop();
+        this._loginValidate();
     },
     _handleSidebar: function () {
         var sideBarOpen = true;
@@ -109,7 +111,7 @@ var Framework = {
     },
     _handleGoTop: function () {
         jQuery('.footer .go-top').click(function (e) {
-                jQuery('html,body').animate({scrollTop: $("body").offset().top}, 'slow');
+                jQuery('html,body').animate({scrollTop: $("html").offset().top}, 'slow');
                 e.preventDefault();
             });
     },
@@ -171,7 +173,100 @@ var Framework = {
                 el.slideDown(200);
             }
         });
+    },
+    logout: function() {
+        Framework.request('logout', '', 'POST', false, function(response) {
+            location.reload();
+        })
+    },
+    _loginValidate: function() {
+        $('.login-form').validate({
+            errorElement: 'label',
+            errorClass: 'help-inline',
+            focusInvalid: false,
+            rules: {
+                username: {
+                    required: true
+                },
+                password: {
+                    required: true
+                }
+            },
+
+            messages: {
+                username: {
+                    required: "Usuário é obrigatório."
+                },
+                password: {
+                    required: "Senha é obrigatória."
+                }
+            },
+
+            highlight: function (element) {
+                $(element)
+                    .closest('.control-group').addClass('error');
+            },
+
+            success: function (label) {
+                label.closest('.control-group').removeClass('error');
+                label.remove();
+            },
+
+            errorPlacement: function (error, element) {
+                error.addClass('help-small no-left-padding').insertAfter(element.closest('.input-icon'));
+            }
+        });
+
+        $('.login-form input').keypress(function (e) {
+            if (e.which == 13) {
+                $('.login-form').validate().form().submit()
+             }
+        });
+    },
+    formUserValidate: function() {
+    },
+    formArdRequest: function() {
+        var form = $('#arduinoform').serializeObject();
+        Framework.request('ipArduinoSave', form, 'POST', false, function (response) {
+            if(response == '1') {
+                if(!$('#sucessArdID').hasClass('hide')) {
+                    $('#sucessArdID').css({display: 'none'});
+                }
+                $('#errorArdID').css({display: 'none'});
+                $('#sucessArdID').fadeIn("slow", function() {
+                            $(this).removeClass('hide');
+                        }
+                    );
+            } else {
+                if(!$('#errorArdID').hasClass('hide')) {
+                    $('#errorArdID').css({display: 'none'});
+                }
+                $('#sucessArdID').css({display: 'none'});
+                $('#errorArdID').fadeIn("slow", function() {
+                        $(this).removeClass('hide');
+                    }
+                );
+                console.error('ipArduinoSaveError: '+response);
+            }
+        });
     }
+};
+
+$.fn.serializeObject = function()
+{
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name]) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
 };
 
 var Charts = {
