@@ -9,24 +9,24 @@
     <file path="/application.ini" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370737973871" ignored="false" />
     <file path="/Configuration.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1365385750311" ignored="false" />
     <file path="/Querys.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1365386873584" ignored="false" />
-    <file path="/index.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370760769646" ignored="false" />
-    <file path="/style.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370761183771" ignored="false" />
+    <file path="/index.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371358515903" ignored="false" />
+    <file path="/style.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371513693380" ignored="false" />
     <file path="/login.tpl.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367093980815" ignored="false" />
     <file path="/a.dummy" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370797405760" ignored="false" />
     <file path="/bootstrap-responsive.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367094695223" ignored="false" />
     <file path="/intro.tpl.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367101877177" ignored="false" />
-    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370837877199" ignored="false" />
-    <file path="/Application.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370837604497" ignored="false" />
-    <file path="/pageIntro.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370837747653" ignored="false" />
+    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371522444091" ignored="false" />
+    <file path="/Application.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371355195600" ignored="false" />
+    <file path="/pageIntro.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371518300219" ignored="false" />
     <file path="/metro.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367127386588" ignored="false" />
-    <file path="/pageLogin.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370791312457" ignored="false" />
+    <file path="/pageLogin.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371338017911" ignored="false" />
     <file path="/fonts.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367160303116" ignored="false" />
-    <file path="/pageHeader.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370794105293" ignored="false" />
+    <file path="/pageHeader.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371359028358" ignored="false" />
     <file path="/dummy.txt" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367163134595" ignored="false" />
     <file path="/light.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187926169" ignored="false" />
     <file path="/blue.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187876425" ignored="false" />
     <file path="/purple.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187659156" ignored="false" />
-    <file path="/pageFooter.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370740525777" ignored="false" />
+    <file path="/pageFooter.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371402721721" ignored="false" />
     <file path="/brown.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367187767000" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/html5/xhtml5.xsd" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368935127444" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xhtml1-transitional.xsd" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368935127444" ignored="false" />
@@ -51,15 +51,15 @@
     <file path="/Response.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368976123736" ignored="false" />
     <file path="/IResponse.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368976137199" ignored="false" />
     <file path="/Framework.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368979240094" ignored="false" />
-    <file path="/Util.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370836970501" ignored="false" />
+    <file path="/Util.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371353470447" ignored="false" />
     <file path="/Classloader.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368977755810" ignored="false" />
     <file path="/pageDashboard.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1368981935533" ignored="false" />
-    <file path="/pageUser.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370836071765" ignored="false" />
+    <file path="/pageUser.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371516218774" ignored="false" />
     <file path="/socket.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370717861636" ignored="false" />
-    <file path="/pageDashboard.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370801561047" ignored="false" />
+    <file path="/pageDashboard.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371522686999" ignored="false" />
     <file path="/pageSobre.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370749193213" ignored="false" />
     <file path="/socketserver.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369522562645" ignored="false" />
-    <file path="/pageDisp.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370832317775" ignored="false" />
+    <file path="/pageDisp.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371430874594" ignored="false" />
     <file path="/pageFooterIntro.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1369958040587" ignored="false" />
     <file path="/main.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370107953960" ignored="false" />
     <file path="/server.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370108046740" ignored="false" />
@@ -67,6 +67,9 @@
     <file path="/Login.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370797164552" ignored="false" />
     <file path="/Template.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370793697688" ignored="false" />
     <file path="/.htaccess" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370795583829" ignored="false" />
+    <file path="/Socket.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371320662597" ignored="false" />
+    <file path="/jquery.validate.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371353142982" ignored="false" />
+    <file path="$PROJECT_DIR$/houseeconomic/AndroidManifest.xml" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371514208321" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,19 +89,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Util.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Util.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="19" selection-start="1165" selection-end="1165" vertical-scroll-proportion="-0.65384614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="util.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="30" selection-start="5990" selection-end="5990" vertical-scroll-proportion="0.0">
+            <state line="439" column="74" selection-start="16007" selection-end="16007" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,25 +101,43 @@
       <file leaf-file-name="pageDashboard.tpl.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/pageDashboard.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="70" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.61393154">
+            <state line="46" column="53" selection-start="2160" selection-end="2160" vertical-scroll-proportion="0.44155845">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Application.php">
+      <file leaf-file-name="Socket.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Socket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="32" selection-start="793" selection-end="799" vertical-scroll-proportion="-9.807693">
+            <state line="83" column="35" selection-start="2119" selection-end="2300" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Login.php">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="9" selection-start="2405" selection-end="2405" vertical-scroll-proportion="-27.038462">
+            <state line="1" column="36" selection-start="50683" selection-end="50683" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageDisp.tpl.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/pageDisp.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="46" selection-start="1999" selection-end="1999" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageFooter.tpl.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="65" selection-start="345" selection-end="345" vertical-scroll-proportion="-2.6153846">
               <folding />
             </state>
           </provider>
@@ -134,7 +146,16 @@
       <file leaf-file-name="pageUser.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageUser.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="90" selection-start="11515" selection-end="11515" vertical-scroll-proportion="-9.038462">
+            <state line="63" column="87" selection-start="3239" selection-end="3239" vertical-scroll-proportion="-23.538462">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageLogin.tpl.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/pageLogin.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="45" selection-start="98" selection-end="98" vertical-scroll-proportion="-1.9615384">
               <folding />
             </state>
           </provider>
@@ -143,25 +164,7 @@
       <file leaf-file-name="pageIntro.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageIntro.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="77" selection-start="1290" selection-end="1299" vertical-scroll-proportion="-15.038462">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.flot.categories.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/jquery.flot.categories.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="1631" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.flot.crosshair.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/jquery.flot.crosshair.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="1532" selection-start="1532" selection-end="1532" vertical-scroll-proportion="0.0">
+            <state line="30" column="10" selection-start="1518" selection-end="1518" vertical-scroll-proportion="-19.615385">
               <folding />
             </state>
           </provider>
@@ -177,20 +180,20 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/js/jquery.flot.crosshair.js" />
-        <option value="$PROJECT_DIR$/public/js/jquery.js" />
         <option value="$PROJECT_DIR$/public/js/jquery.validate.js" />
-        <option value="$PROJECT_DIR$/public/css/fonts.css" />
-        <option value="$PROJECT_DIR$/public/js/jquery.flot.js" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/css/metro.css" />
-        <option value="$PROJECT_DIR$/public/pageDisp.tpl.html" />
-        <option value="$PROJECT_DIR$/library/Connection.php" />
-        <option value="$PROJECT_DIR$/public/pageUser.tpl.html" />
         <option value="$PROJECT_DIR$/library/Util.php" />
-        <option value="$PROJECT_DIR$/public/pageIntro.tpl.html" />
+        <option value="$PROJECT_DIR$/public/js/responsive.js" />
+        <option value="$PROJECT_DIR$/public/js/jquery-ui.js" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/public/pageLogin.tpl.html" />
         <option value="$PROJECT_DIR$/library/Application.php" />
         <option value="$PROJECT_DIR$/library/Login.php" />
+        <option value="$PROJECT_DIR$/public/pageHeader.tpl.html" />
+        <option value="$PROJECT_DIR$/public/pageFooter.tpl.html" />
+        <option value="$PROJECT_DIR$/public/pageDisp.tpl.html" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/pageUser.tpl.html" />
+        <option value="$PROJECT_DIR$/public/pageIntro.tpl.html" />
         <option value="$PROJECT_DIR$/public/js/util.js" />
         <option value="$PROJECT_DIR$/public/pageDashboard.tpl.html" />
       </list>
@@ -363,8 +366,13 @@
       <recent name="D:\xampp\htdocs\smartcontrollerenergy" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.index.php">
+  <component name="RunManager" selected="PHP Script.Socket.php">
     <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Socket.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/library/Socket.php">
       <RunnerSettings RunnerId="PhpScriptDebugRunner" />
       <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
       <method />
@@ -405,12 +413,14 @@
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.Socket.php" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.Socket.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.index.php" />
       </list>
     </recent_temporary>
   </component>
@@ -442,14 +452,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23159018" sideWeight="0.67296994" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25827107" sideWeight="0.6028921" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3971079" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -524,14 +534,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/index.php</url>
-          <line>12</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="37" />
+      <option name="time" value="44" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -547,110 +550,100 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/metro.css">
+    <entry file="file://$PROJECT_DIR$/public/js/responsive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9814" selection-start="9814" selection-end="9814" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="1161" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/fonts.css">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="15274" selection-start="15274" selection-end="15274" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap-responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="23" selection-start="439" selection-end="439" vertical-scroll-proportion="0.27262315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="80" selection-end="89" vertical-scroll-proportion="0.09736541" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/pageDisp.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="111" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.5182999">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="20" selection-start="3121" selection-end="3121" vertical-scroll-proportion="0.34356552">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/pageUser.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="90" selection-start="11515" selection-end="11515" vertical-scroll-proportion="-9.038462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/pageIntro.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="77" selection-start="1290" selection-end="1299" vertical-scroll-proportion="-15.038462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="9" selection-start="2405" selection-end="2405" vertical-scroll-proportion="-27.038462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="19" selection-start="1165" selection-end="1165" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
+        <state line="7" column="19" selection-start="485" selection-end="496" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="32" selection-start="793" selection-end="799" vertical-scroll-proportion="-9.807693">
-          <folding />
-        </state>
+        <state line="90" column="24" selection-start="4137" selection-end="4198" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/util.js">
+    <entry file="file://$PROJECT_DIR$/library/Util.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="30" selection-start="5990" selection-end="5990" vertical-scroll-proportion="0.0">
+        <state line="49" column="74" selection-start="1603" selection-end="1603" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="51" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageHeader.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="6" selection-start="857" selection-end="857" vertical-scroll-proportion="-11.115385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageDisp.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="46" selection-start="1999" selection-end="1999" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="49250" selection-start="49250" selection-end="49250" vertical-scroll-proportion="0.0">
+        <state line="1" column="36" selection-start="50683" selection-end="50683" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Socket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="35" selection-start="2119" selection-end="2300" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="65" selection-start="345" selection-end="345" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageUser.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="87" selection-start="3239" selection-end="3239" vertical-scroll-proportion="-23.538462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageIntro.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="10" selection-start="1518" selection-end="1518" vertical-scroll-proportion="-19.615385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageLogin.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="45" selection-start="98" selection-end="98" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="439" column="74" selection-start="16007" selection-end="16007" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageDashboard.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="70" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.61393154">
+        <state line="46" column="53" selection-start="2160" selection-end="2160" vertical-scroll-proportion="0.44155845">
           <folding />
         </state>
       </provider>

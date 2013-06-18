@@ -30,6 +30,8 @@ class Login
                 'HEADER' => Template::display(TEMPLATE_DIR.'pageHeader.tpl.html',
                     array('TITLE_PAGE' => TITLE_PAGE,
                         'CSSPATH' => CSSPATH)),
+                'PAGENAMEAPP' => PAGENAMEAPP,
+                'USERSESSION' => strtoupper($this->sessionUserName()),
                 'FOOTERINTRO' => Template::display(TEMPLATE_DIR.'pageFooterIntro.tpl.html'),
                 'FOOTER' => Template::display(TEMPLATE_DIR.'pageFooter.tpl.html', array('JSPATH'  => JSPATH)),
             );
@@ -39,6 +41,7 @@ class Login
                 'HEADER' => Template::display(TEMPLATE_DIR.'pageHeader.tpl.html',
                     array('TITLE_PAGE' => TITLE_PAGE,
                         'CSSPATH' => CSSPATH)),
+                'PAGENAMEAPP' => PAGENAMEAPP,
                 'FOOTER' => Template::display(TEMPLATE_DIR.'pageFooter.tpl.html', array('JSPATH'  => JSPATH)),
                 'HIDE'   => ''
             );

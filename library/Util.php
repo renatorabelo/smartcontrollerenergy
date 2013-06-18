@@ -17,7 +17,7 @@ class Util {
 
     public function verifyUserPass($login, $password) {
         $db = Db::getInstance()->select()
-           ->from('User', array('userLogin'))
+           ->from('user', array('userLogin'))
            ->where('userLogin = ?', $login)
            ->andWhere('userPass = ?',$this->encrypt($password));
         if($db->fetchRow()) {
@@ -28,20 +28,34 @@ class Util {
     }
     public function dadosUser($login) {
         $db = Db::getInstance()->select()
-            ->from('User')
+            ->from('user')
             ->where('userLogin = ?', $login);
         return $db->fetchObject();
     }
     public function saveArduino($data, $user) {
         $arrayValues = array('userArduinoIp' => $data->ipArduino, 'userArduinoPort' => $data->portaArduino);
         $where       = "userLogin = '$user'";
-        Db::getInstance()->update('User', $arrayValues, $where);
+        Db::getInstance()->update('user', $arrayValues, $where);
+        return '1';
+    }
+
+    public function saveUserInfo($data, $user) {
+        $arrayValues = array('userName' => $data->name, 'userLastName' => $data->lastname, 'userMail' => $data->email);
+        $where       = "userLogin = '$user'";
+        Db::getInstance()->update('user', $arrayValues, $where);
+        return '1';
+    }
+
+    public function savePassword($data, $user) {
+        $arrayValues = array('userPass' => $this->encrypt($data->password));
+        $where       = "userLogin = '$user'";
+        Db::getInstance()->update('user', $arrayValues, $where);
         return '1';
     }
 
     public function loadIpArduino($login) {
         $db = Db::getInstance()->select()
-            ->from('User', array('userArduinoIp', 'userArduinoPort'))
+            ->from('user', array('userArduinoIp', 'userArduinoPort'))
             ->where('userLogin = ?', $login);
         $values = $db->fetchRow();
         return $values['userArduinoIp'].':'.$values['userArduinoPort'];

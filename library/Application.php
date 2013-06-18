@@ -36,6 +36,13 @@ class Application
                         $value = json_decode($_POST['dataset']);
                         echo Util::getInstance()->saveArduino($value, $this->Login->sessionUserName());
                         break;
+                    case 'saveUserInfo':
+                        $value = json_decode($_POST['dataset']);
+                        echo Util::getInstance()->saveUserInfo($value, $this->Login->sessionUserName());
+                        break;
+                    case 'savePassword':
+                        $value = json_decode($_POST['dataset']);
+                        echo Util::getInstance()->savePassword($value, $this->Login->sessionUserName());
                 }
             } elseif(isset($_GET['action'])) {
                 switch($_GET['action']) {
@@ -80,6 +87,8 @@ class Application
                         'HEADER' => Template::display(TEMPLATE_DIR.'pageHeader.tpl.html',
                             array('TITLE_PAGE' => TITLE_PAGE,
                                 'CSSPATH' => CSSPATH)),
+                        'PAGENAMEAPP' => PAGENAMEAPP,
+                        'USERSESSION' => strtoupper($this->Login->sessionUserName()),
                         'FOOTERINTRO' => Template::display(TEMPLATE_DIR.'pageFooterIntro.tpl.html'),
                         'FOOTER' => Template::display(TEMPLATE_DIR.'pageFooter.tpl.html', array('JSPATH'  => JSPATH)),
                     );
@@ -90,7 +99,8 @@ class Application
                                                         array('TITLE_PAGE' => TITLE_PAGE,
                                                               'CSSPATH' => CSSPATH)),
                         'FOOTER' => Template::display(TEMPLATE_DIR.'pageFooter.tpl.html', array('JSPATH'  => JSPATH)),
-                        'HIDE'   => 'hide'
+                        'HIDE'   => 'hide',
+                        'PAGENAMEAPP' => PAGENAMEAPP,
                     );
                     echo Template::display(TEMPLATE_DIR.'pageLogin.tpl.html', $configsTpl);
                 }
