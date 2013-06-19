@@ -15,7 +15,7 @@
     <file path="/a.dummy" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1370797405760" ignored="false" />
     <file path="/bootstrap-responsive.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367094695223" ignored="false" />
     <file path="/intro.tpl.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367101877177" ignored="false" />
-    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371522444091" ignored="false" />
+    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371610374992" ignored="false" />
     <file path="/Application.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371355195600" ignored="false" />
     <file path="/pageIntro.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371518300219" ignored="false" />
     <file path="/metro.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367127386588" ignored="false" />
@@ -89,19 +89,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="util.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="util.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="439" column="74" selection-start="16007" selection-end="16007" vertical-scroll-proportion="0.0">
+            <state line="505" column="21" selection-start="18008" selection-end="18008" vertical-scroll-proportion="0.6231386">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageDashboard.tpl.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pageDashboard.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageDashboard.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="53" selection-start="2160" selection-end="2160" vertical-scroll-proportion="0.44155845">
+            <state line="46" column="53" selection-start="2160" selection-end="2160" vertical-scroll-proportion="-9.923077">
               <folding />
             </state>
           </provider>
@@ -137,7 +137,7 @@
       <file leaf-file-name="pageFooter.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="65" selection-start="345" selection-end="345" vertical-scroll-proportion="-2.6153846">
+            <state line="4" column="65" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,7 +146,7 @@
       <file leaf-file-name="pageUser.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageUser.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="87" selection-start="3239" selection-end="3239" vertical-scroll-proportion="-23.538462">
+            <state line="63" column="87" selection-start="3239" selection-end="3239" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,7 +155,7 @@
       <file leaf-file-name="pageLogin.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageLogin.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="45" selection-start="98" selection-end="98" vertical-scroll-proportion="-1.9615384">
+            <state line="3" column="45" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,7 +164,7 @@
       <file leaf-file-name="pageIntro.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageIntro.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="10" selection-start="1518" selection-end="1518" vertical-scroll-proportion="-19.615385">
+            <state line="30" column="10" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,8 +194,8 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/pageUser.tpl.html" />
         <option value="$PROJECT_DIR$/public/pageIntro.tpl.html" />
-        <option value="$PROJECT_DIR$/public/js/util.js" />
         <option value="$PROJECT_DIR$/public/pageDashboard.tpl.html" />
+        <option value="$PROJECT_DIR$/public/js/util.js" />
       </list>
     </option>
   </component>
@@ -260,7 +260,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -345,6 +344,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -459,7 +459,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25827107" sideWeight="0.6028921" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26414087" sideWeight="0.6028921" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3971079" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -608,42 +608,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="65" selection-start="345" selection-end="345" vertical-scroll-proportion="-2.6153846">
+        <state line="4" column="65" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageUser.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="87" selection-start="3239" selection-end="3239" vertical-scroll-proportion="-23.538462">
+        <state line="63" column="87" selection-start="3239" selection-end="3239" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageIntro.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="10" selection-start="1518" selection-end="1518" vertical-scroll-proportion="-19.615385">
+        <state line="30" column="10" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageLogin.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="45" selection-start="98" selection-end="98" vertical-scroll-proportion="-1.9615384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="439" column="74" selection-start="16007" selection-end="16007" vertical-scroll-proportion="0.0">
+        <state line="3" column="45" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageDashboard.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="53" selection-start="2160" selection-end="2160" vertical-scroll-proportion="0.44155845">
+        <state line="46" column="53" selection-start="2160" selection-end="2160" vertical-scroll-proportion="-9.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="505" column="21" selection-start="18008" selection-end="18008" vertical-scroll-proportion="0.6231386">
           <folding />
         </state>
       </provider>

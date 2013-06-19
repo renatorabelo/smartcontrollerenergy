@@ -62,8 +62,8 @@ public class HouseActivity extends Activity {
                 }
             });
             //this.webView.loadUrl("http://controllerenergy.xp3.biz");
-            this.webView.loadUrl("http://192.168.1.2/smartcontrollerenergy/");
-      //      this.webView.loadUrl("http://houseeconomic.p.ht/");
+            //this.webView.loadUrl("http://192.168.1.2/smartcontrollerenergy/");
+            this.webView.loadUrl("http://houseeconomic.p.ht/");
         }
     }
     @Override
