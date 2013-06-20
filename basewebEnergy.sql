@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de Dados: `webenergy`
 --
-CREATE DATABASE `webenergy` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE `webenergy`;
 
 -- --------------------------------------------------------
 
@@ -38,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `userPhoto` varchar(30) COLLATE utf8_bin DEFAULT NULL,
   `userArduinoIp` varchar(15) COLLATE utf8_bin DEFAULT NULL,
   `userArduinoPort` varchar(6) COLLATE utf8_bin DEFAULT NULL,
+  `userSerialXbee` varchar(20) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`userId`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
 
@@ -45,8 +44,21 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Extraindo dados da tabela `user`
 --
 
-INSERT INTO `user` (`userId`, `userName`, `userLogin`, `userPass`, `userLastName`, `userMail`, `userPhoto`, `userArduinoIp`, `userArduinoPort`) VALUES
-(1, 'KESSILER', 'kessiler', 'GNZz/T8l3j3Vgg/IRPf0W/ErJSU19dC6+7zGdlkFanA=', '', NULL, '', '192.168.1.1', '8080');
+INSERT INTO `user` (`userId`, `userName`, `userLogin`, `userPass`, `userLastName`, `userMail`, `userPhoto`, `userArduinoIp`, `userArduinoPort`, `userSerialXbee`) VALUES
+(1, 'KESSILER', 'kessiler', 'GNZz/T8l3j3Vgg/IRPf0W/ErJSU19dC6+7zGdlkFanA=', 'teste', 'kessiler@gmail.com', '', '201.80.135.177', '8081', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `userdata`
+--
+
+CREATE TABLE IF NOT EXISTS `userdata` (
+  `userId` int(11) NOT NULL,
+  `userPotencia` float NOT NULL,
+  `userCorrente` float NOT NULL,
+  `userDateInfo` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

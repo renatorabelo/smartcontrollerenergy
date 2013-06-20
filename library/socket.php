@@ -42,7 +42,15 @@ final class Socket
                         $buffer = '';
                         $bytes = @socket_recv($socket, $buffer, 4096, 0);
                         if ($bytes > 0) {
-                            echo $buffer;
+                            if(DEBUG) echo $buffer;
+                            $jSON = json_decode($buffer);
+                            $Db = \StoredLibrary\Connection::getInstance();
+                            $Db->select('userId')->from('user')->where('userSerialXBee', $jSON->Serial);
+                            $data = $Db->fetchObject();
+                            if(!empty($data)) {
+                                $arrayValues = array('userId' => $data->userId, 'userPotencia'  => $data->Potencia, 'userCorrente' => $data->Corrente, 'userDateInfo' => now());
+                                $Db->insert('userdata',$arrayValues);
+                            }
                         } else {
                             $this->wsRemoveClient($clientID);
                         }
@@ -74,11 +82,20 @@ final class Socket
     }
 }
 
-
 error_reporting(E_ALL);
 set_time_limit(0);
-ob_implicit_flush();
-define('HOST', '192.168.1.2');
+define('APP_LIBRARY', realpath(__DIR__ . DIRECTORY_SEPARATOR . 'library'));
+require_once(APP_LIBRARY . DIRECTORY_SEPARATOR . 'Classloader.php');
+$loader = new \StoredLibrary\Classloader(APP_LIBRARY);
+$loader->registerNamespace('StoredLibrary', __DIR__);
+$loader->register();
+
+define('HOST', '192.168.0.2');
 define('PORT', '9750');
+define('DEBUG', false);
+if(DEBUG) { ob_implicit_flush(); echo "Debug MOD Initialize \n";}
+
+echo date('Y-m-d H:i:s');
+
 $Socket = new Socket();
 $Socket->wsStartServer(HOST, PORT);

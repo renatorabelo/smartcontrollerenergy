@@ -53,6 +53,7 @@ class Application
                                 break;
                             case 'pageUser':
                                 $DadosUser = Util::getInstance()->dadosUser($this->Login->sessionUserName());
+                                //var_dump(print_r($DadosUser));die;
                                 $configsPageUser = array(
                                     'NAME' => $DadosUser->userName,
                                     'LASTNAME' => $DadosUser->userLastName,
@@ -60,7 +61,8 @@ class Application
                                     'MAIL' => $DadosUser->userMail,
                                     'PHOTO' => Util::getInstance()->loadURLImage($DadosUser->userPhoto),
                                     'ARDUINOIP' => $DadosUser->userArduinoIp,
-                                    'ARDUINOPORT' => $DadosUser->userArduinoPort
+                                    'ARDUINOPORT' => $DadosUser->userArduinoPort,
+                                    'XBEESERIAL' => $DadosUser->userSerialXBee
                                 );
                                 echo Template::display(TEMPLATE_DIR.'pageUser.tpl.html', $configsPageUser);
                                 break;

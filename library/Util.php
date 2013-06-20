@@ -33,7 +33,7 @@ class Util {
         return $db->fetchObject();
     }
     public function saveArduino($data, $user) {
-        $arrayValues = array('userArduinoIp' => $data->ipArduino, 'userArduinoPort' => $data->portaArduino);
+        $arrayValues = array('userArduinoIp' => $data->ipArduino, 'userArduinoPort' => $data->portaArduino, 'userSerialXBee' => $data->serialXBee);
         $where       = "userLogin = '$user'";
         Db::getInstance()->update('user', $arrayValues, $where);
         return '1';
