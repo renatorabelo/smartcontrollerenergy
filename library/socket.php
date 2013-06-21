@@ -48,7 +48,7 @@ final class Socket
                             $Db->select('userId')->from('user')->where('userSerialXBee', $jSON->Serial);
                             $data = $Db->fetchObject();
                             if(!empty($data)) {
-                                $arrayValues = array('userId' => $data->userId, 'userPotencia'  => $data->Potencia, 'userCorrente' => $data->Corrente, 'userDateInfo' => now());
+                                $arrayValues = array('userId' => $data->userId, 'userPotencia'  => $data->Potencia, 'userCorrente' => $data->Corrente, 'userDateInfo' => date('Y-m-d H:i:s'));
                                 $Db->insert('userdata',$arrayValues);
                             }
                         } else {
@@ -84,6 +84,7 @@ final class Socket
 
 error_reporting(E_ALL);
 set_time_limit(0);
+date_default_timezone_set('America/Sao_Paulo');
 define('APP_LIBRARY', realpath(__DIR__ . DIRECTORY_SEPARATOR . 'library'));
 require_once(APP_LIBRARY . DIRECTORY_SEPARATOR . 'Classloader.php');
 $loader = new \StoredLibrary\Classloader(APP_LIBRARY);
@@ -94,8 +95,6 @@ define('HOST', '192.168.0.2');
 define('PORT', '9750');
 define('DEBUG', false);
 if(DEBUG) { ob_implicit_flush(); echo "Debug MOD Initialize \n";}
-
-echo date('Y-m-d H:i:s');
 
 $Socket = new Socket();
 $Socket->wsStartServer(HOST, PORT);

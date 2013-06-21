@@ -106,7 +106,9 @@ var Framework = {
             $('.page-content').empty().append(response);
             Framework.menuTemplate(windowName);
             if ($(window).width() < 900) {
-                $(".nav-collapse").collapse('hide');
+                if($(".nav-collapse").hasClass("in")) {
+                    $(".nav-collapse").collapse('hide');
+                }
             }
         })
     },

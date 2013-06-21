@@ -53,7 +53,6 @@ class Application
                                 break;
                             case 'pageUser':
                                 $DadosUser = Util::getInstance()->dadosUser($this->Login->sessionUserName());
-                                //var_dump(print_r($DadosUser));die;
                                 $configsPageUser = array(
                                     'NAME' => $DadosUser->userName,
                                     'LASTNAME' => $DadosUser->userLastName,

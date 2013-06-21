@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `userPhoto` varchar(30) COLLATE utf8_bin DEFAULT NULL,
   `userArduinoIp` varchar(15) COLLATE utf8_bin DEFAULT NULL,
   `userArduinoPort` varchar(6) COLLATE utf8_bin DEFAULT NULL,
-  `userSerialXbee` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `userSerialXBee` varchar(20) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`userId`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
 
