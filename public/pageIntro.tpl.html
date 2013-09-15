@@ -31,36 +31,62 @@
     </div>
     <div class="page-container row-fluid">
         <div class="page-sidebar nav-collapse collapse">
-            <ul id="menu-left">
+            <ul id="menu-left" class="page-sidebar-menu">
                 <li class="toggle hidden-phone" id="hidden-phonetoggle">
                     <div class="sidebar-toggler hidden-phone"></div>
                 </li>
+                <li id="pageSobre">
+                    <a href="javascript: void(0)" onclick="Framework.loadWindow('pageSobre');">
+                        <i class="icon-external-link"></i>
+                        <span class="title">Sobre o EHA</span>
+                    </a>
+                </li>
                 <li id="pageDashboard">
-                    <a href="javascript: void(0)" onclick="Framework.loadWindow('pageDashboard');">
+                    <a href="javascript: void(0)">
                         <i class="icon-bar-chart"></i>
                         <span class="title">Indicadores</span>
                         <span class="arrow"></span>
                     </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="javascript: void(0)" onclick="Framework.loadWindow('pageDashboard');">
+                                Consumo</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)" onclick="Framework.loadWindow('pageTemperature');">
+                                Temperatura</a>
+                        </li>
+                    </ul>
                 </li>
                 <li id="pageDisp">
-                    <a href="javascript: void(0)" onclick="Framework.loadWindow('pageDisp');">
+                    <a href="javascript: void(0)">
                         <i class="icon-sitemap"></i>
-                        <span class="title">Dispositivos</span>
+                        <span class="title">Cômodos</span>
                         <span class="arrow"></span>
                     </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="javascript: void(0)" onclick="Framework.loadWindow('pageDispSala');">
+                                Sala</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)" onclick="Framework.loadWindow('pageDispQuartos');">
+                                Quartos</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)" onclick="Framework.loadWindow('pageDispGaragem');">
+                                Garagem</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)" onclick="Framework.loadWindow('pageDispPiscina');">
+                                Piscina</a>
+                        </li>
+                    </ul>
                 </li>
                 <li id="pageUser">
                     <a href="javascript: void(0)" onclick="Framework.loadWindow('pageUser');">
                         <i class="icon-user"></i>
                         <span class="title">Usuário</span>
-                        <span class="arrow"></span>
-                    </a>
-                </li>
-                <li id="pageSobre">
-                    <a href="javascript: void(0)" onclick="Framework.loadWindow('pageSobre');">
-                        <i class="icon-external-link"></i>
-                        <span class="title">Sobre</span>
-                        <span class="arrow"></span>
                     </a>
                 </li>
             </ul>
@@ -71,4 +97,4 @@
     [@FOOTERINTRO]
 </div>
 [@FOOTER]
-<script>Framework.loadWindow('pageDashboard');</script>
+<script>Framework.loadWindow('pageSobre');</script>

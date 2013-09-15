@@ -66,7 +66,7 @@ var Framework = {
                 timeout: 3000,
                 jsonpCallback: 'callBack',
                 error: function(error) {
-                    console.error(error);
+                    console.error(error.message);
                 }
             });
         });
@@ -78,12 +78,17 @@ var Framework = {
             dataset: JSON.stringify(data)
         };
         if(loading) {
-            $('body').append('<div class="modal-backdrop fade in" id="modalback">' +
-                '<div id="ajaxdiv">' +
-                '<img src="public/img/ajax-loader.gif" />' +
-                '</div>' +
-                '</div>'
-            );
+            if(Framework.isMobile()) {
+                window.Mobile.showLoading();
+            } else {
+                $('body').append('<div class="modal-backdrop fade in" id="modalback">' +
+                    '<div id="ajaxdiv">' +
+                    '<img src="public/img/ajax-loader.gif" />' +
+                    '</div>' +
+                    '</div>'
+                );
+                $("#ajaxdiv").center(false);
+            }
         }
         $.ajax({
             type: type,
@@ -94,10 +99,16 @@ var Framework = {
                 responseHandler(response);
             },
             error: function (error) {
-                console.error(error);
+                console.error(error.message);
             },
             complete: function () {
-                if(loading) $('#modalback').remove();
+                if(loading) {
+                    if(Framework.isMobile()) {
+                        window.Mobile.removeLoading();
+                    } else {
+                        $('#modalback').remove();
+                    }
+                }
             }
         })
     },
@@ -203,7 +214,7 @@ var Framework = {
         $("#menu-left").find(".start").each(function () {
                 if ($(this).hasClass('start active')) {
                     $(this).removeClass('start active');
-                    $(this).find('span:last').each(function () {
+                    $(this).find('span:last .arrow').each(function () {
                         $(this).addClass('arrow');
                     });
                 }
@@ -264,7 +275,7 @@ var Framework = {
         })
     },
     stateServer: function() {
-        Framework.request('loadIpArduino', '', 'GET', true, function(response) {
+        Framework.request('loadIpArduino', '', 'GET', false, function(response) {
             $.ajax({
                 type: 'GET',
                 url:response,
@@ -275,10 +286,10 @@ var Framework = {
                 timeout: 2000,
                 jsonpCallback: 'callBack',
                 success: function(data) {
-                    $('#stateServer').empty().html('<b><font color="green">Online</font></b>');
+                    $('#stateServer').empty().html('<font class="onlineStatus">Online</font>');
                 },
                 error: function(data) {
-                    $('#stateServer').empty().html('<b><font color="red">Offline</font></b>');
+                    $('#stateServer').empty().html('<font class="offlineStatus">Offline</font>');
                 }
             });
         });
@@ -312,7 +323,7 @@ var Framework = {
                             $(this).removeClass('hide');
                         }
                     );
-                    console.error('saveUserInfoError: '+response);
+                    console.error('saveUserInfoError: '+response.message);
                 }
             });
         }
@@ -341,7 +352,7 @@ var Framework = {
                             $(this).removeClass('hide');
                         }
                     );
-                    console.error('saveUserInfoError: '+response);
+                    console.error('saveUserInfoError: '+response.message);
                 }
             });
         }
@@ -370,7 +381,7 @@ var Framework = {
                             $(this).removeClass('hide');
                         }
                     );
-                    console.error('savePasswordError: '+response);
+                    console.error('savePasswordError: '+response.message);
                 }
             });
         }
@@ -399,10 +410,52 @@ var Framework = {
                             $(this).removeClass('hide');
                         }
                     );
-                    console.error('ipArduinoSaveError: '+response);
+                    console.error('ipArduinoSaveError: '+response.message);
                 }
             });
         }
+    },
+    subMenus: function() {
+        $('.sub-menu').on('click', 'li > a', function (e) {
+            var menuContainer = jQuery('.page-sidebar ul');
+            menuContainer.children('li.active').removeClass('active');
+            menuContainer.children('arrow.open').removeClass('open');
+
+            $(this).parents('li').each(function () {
+                $(this).addClass('active');
+                $(this).children('a > span.arrow').addClass('open');
+            });
+            $(this).parents('li').addClass('active');
+        })
+        $('.page-sidebar').on('click', 'li > a', function (e) {
+            if ($(this).next().hasClass('sub-menu') == false) {
+                if ($('.btn-navbar').hasClass('collapsed') == false) {
+                    $('.btn-navbar').click();
+                }
+                return;
+            }
+
+            var parent = $(this).parent().parent();
+
+            parent.children('li.open').children('a').children('.arrow').removeClass('open');
+            parent.children('li.open').children('.sub-menu').slideUp(200);
+            parent.children('li.open').removeClass('open');
+
+            var sub = jQuery(this).next();
+            if (sub.is(":visible")) {
+                jQuery('.arrow', jQuery(this)).removeClass("open");
+                jQuery(this).parent().removeClass("open");
+            } else {
+                jQuery('.arrow', jQuery(this)).addClass("open");
+                jQuery(this).parent().addClass("open");
+                sub.slideToggle('open');
+            }
+
+            e.preventDefault();
+        });
+    },
+    isMobile: function() {
+        return (window.Mobile);
     }
 };
 
@@ -422,6 +475,20 @@ $.fn.serializeObject = function()
     });
     return o;
 };
+
+jQuery.fn.center = function(parent) {
+    if (parent) {
+        parent = this.parent();
+    } else {
+        parent = window;
+    }
+    this.css({
+        "position": "absolute",
+        "top": ((($(parent).height() - this.outerHeight()) / 2) + $(parent).scrollTop() + "px"),
+        "left": ((($(parent).width() - this.outerWidth()) / 2) + $(parent).scrollLeft() + "px")
+    });
+    return this;
+}
 
 var Charts = {
     chartTracking: function () {
@@ -519,8 +586,6 @@ var Charts = {
             });
         }
     },
-    chartPie : function() {
-    },
     chartBars : function() {
         if($('#chartBars').length) {
             var formatAxis = function(x) {
@@ -551,11 +616,11 @@ var Charts = {
         this.chartTracking();
         this.chartBars();
     }
-
 };
 
 jQuery(document).ready(function () {
     Framework.init();
+    Framework.subMenus();
 });
 
 $(window).setBreakpoints({

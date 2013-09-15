@@ -47,10 +47,8 @@ class Application
             } elseif(isset($_GET['action'])) {
                 switch($_GET['action']) {
                     case 'loadWindow':
-                        switch(json_decode($_GET['dataset'])){
-                            case 'pageDashboard':
-                                echo Template::display(TEMPLATE_DIR.'pageDashboard.tpl.html');
-                                break;
+                        $dataSet  = json_decode($_GET['dataset']);
+                        switch($dataSet){
                             case 'pageUser':
                                 $DadosUser = Util::getInstance()->dadosUser($this->Login->sessionUserName());
                                 $configsPageUser = array(
@@ -63,13 +61,16 @@ class Application
                                     'ARDUINOPORT' => $DadosUser->userArduinoPort,
                                     'XBEESERIAL' => $DadosUser->userSerialXBee
                                 );
-                                echo Template::display(TEMPLATE_DIR.'pageUser.tpl.html', $configsPageUser);
+                                echo Template::display(TEMPLATE_DIR.$dataSet.'.tpl.html', $configsPageUser);
                                 break;
-                            case 'pageSobre':
-                                echo Template::display(TEMPLATE_DIR.'pageSobre.tpl.html');
-                                break;
-                            case 'pageDisp':
-                                echo Template::display(TEMPLATE_DIR.'pageDisp.tpl.html');
+                            case "pageDashboard":
+                            case "pageTemperature":
+                            case "pageSobre":
+                            case "pageDispSala":
+                            case "pageDispQuartos":
+                            case "pageDispGaragem":
+                            case "pageDispPiscina":
+                                echo Template::display(TEMPLATE_DIR.$dataSet.'.tpl.html');
                                 break;
                             default: break;
                         }

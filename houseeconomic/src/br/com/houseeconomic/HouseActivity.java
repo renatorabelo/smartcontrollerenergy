@@ -1,38 +1,42 @@
-package com.houseeconomic;
+package br.com.houseeconomic;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.view.KeyEvent;
+import android.view.*;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.view.Window;
 import android.widget.Toast;
-
-import java.io.File;
 
 
 public class HouseActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
+    private final Context context = this;
     private WebView webView;
-    final Context context = this;
     private ProgressDialog moduleLoading = null;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
-        this.webView = (WebView)findViewById(R.id.webView);
-        if(!this.verificaConexao()) {
+        Util.setAppContext(getApplicationContext());
+        if(!Util.verifyConnection()) {
             Toast.makeText(this, "Não foi possível estabelecer conexão com o servidor.", Toast.LENGTH_LONG).show();
-            this.finish();
+            finish();
         } else {
+            this.webView = (WebView)findViewById(R.id.webView);
+            this.webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
             this.webView.getSettings().setJavaScriptEnabled(true);
             this.webView.getSettings().setSavePassword(false);
+            this.webView.setVerticalScrollBarEnabled(false);
+            this.webView.setHorizontalScrollBarEnabled(false);
+            this.webView.addJavascriptInterface(new JavaScriptInterface(this), "Mobile");
             this.webView.setWebViewClient(new WebViewClient() {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url)
@@ -47,25 +51,44 @@ public class HouseActivity extends Activity {
                 public void onLoadResource (WebView view, String url) {
                     if (moduleLoading == null) {
                         moduleLoading = new ProgressDialog(context);
+                        moduleLoading.setIndeterminate(true);
                         moduleLoading.setCancelable(false);
-                        moduleLoading.setMessage("Inicializando módulos..");
+                        moduleLoading.setMessage("Loading...");
                         moduleLoading.show();
-                        view.setEnabled(false);
                     }
                 }
 
                 public void onPageFinished(WebView view, String url) {
                     if (moduleLoading.isShowing()) {
                         moduleLoading.dismiss();
-                        view.setEnabled(true);
                     }
                 }
             });
-            //this.webView.loadUrl("http://controllerenergy.xp3.biz");
+            this.webView.loadUrl("http://economichouse.orgfree.com");
             //this.webView.loadUrl("http://192.168.1.2/smartcontrollerenergy/");
-            this.webView.loadUrl("http://houseeconomic.p.ht/");
+            //this.webView.loadUrl("http://houseeconomic.p.ht/");
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem Item) {
+        switch (Item.getItemId()) {
+            case R.id.settings:
+                Toast.makeText(context, "teste", Toast.LENGTH_LONG).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(Item);
+        }
+    }
+
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event)
     {
@@ -75,11 +98,20 @@ public class HouseActivity extends Activity {
         }
         return super.onKeyDown(keyCode, event);
     }
+    public class JavaScriptInterface {
+        Context mContext;
 
-    public boolean verificaConexao() {
-        ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        return (conectivtyManager.getActiveNetworkInfo() != null
-                && conectivtyManager.getActiveNetworkInfo().isAvailable()
-                && conectivtyManager.getActiveNetworkInfo().isConnected());
+        JavaScriptInterface(Context c) {
+            mContext = c;
+        }
+        public void showLoading() {
+            moduleLoading.show();
+        }
+        public void removeLoading() {
+            if (moduleLoading.isShowing()) {
+                moduleLoading.dismiss();
+            }
+        }
     }
 }
+

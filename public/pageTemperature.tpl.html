@@ -18,8 +18,8 @@
             </div>
             <script>Framework._handleStyler();</script>
             <h3 class="page-title">
-                Indicadores
-                <small>Painel de Estatísticas</small>
+                Temperatura
+                <small> - Painel de Temperatura</small>
             </h3>
             <ul class="breadcrumb">
                 <li>
@@ -27,7 +27,7 @@
                     <a href="#">Home</a>
                     <i class="icon-angle-right"></i>
                 </li>
-                <li><a href="#">Indicadores</a></li>
+                <li><a href="#">Temperatura</a></li>
                 <li class="pull-right no-text-shadow">
                     <div id="dashboard-report-range"
                          class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive"
@@ -42,36 +42,90 @@
             </ul>
             <!-- END PAGE TITLE & BREADCRUMB-->
         </div>
-        <div class="portlet box blue">
+    </div>
+    <div class="span5">
+        <div class="portlet">
             <div class="portlet-title">
-                <div class="caption"><i class="icon-reorder"></i>Consumo diário aproximado em kWh</div>
+                <div class="caption"><i class="icon-reorder"></i>Quarto 1</div>
                 <div class="tools">
                     <a href="javascript: void(0);" class="collapse"></a>
                     <a href="javascript: void(0);" class="reload"></a>
                 </div>
             </div>
             <div class="portlet-body">
-                <div class="chart" id="chartTracking">
-                </div>
-            </div>
-        </div>
-        <div class="portlet box green">
-            <div class="portlet-title">
-                <div class="caption"><i class="icon-reorder"></i>Média de consumo mensal</div>
-                <div class="tools">
-                    <a href="javascript: void(0);" class="collapse"></a>
-                    <a href="javascript: void(0);" class="reload"></a>
-                </div>
-            </div>
-            <div class="portlet-body">
-                <div class="chart" id="chartBars">
+                <div class="well">
+                    <div class="row-fluid">
+                        <div class="offset4 span4">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        Framework._handlePortlets();
-        Charts.chartTracking();
-        Charts.chartBars();
-    </script>
+    <div class="span5">
+        <div class="portlet">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-reorder"></i>Quarto 2</div>
+                <div class="tools">
+                    <a href="javascript: void(0);" class="collapse"></a>
+                    <a href="javascript: void(0);" class="reload"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="well">
+                    <div class="row-fluid">
+                        <div class="offset4 span4">
+                            <div class="easy-pie-chart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span5">
+        <div class="portlet">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-reorder"></i>Sala</div>
+                <div class="tools">
+                    <a href="javascript: void(0);" class="collapse"></a>
+                    <a href="javascript: void(0);" class="reload"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="well">
+                    <div class="row-fluid">
+                        <div class="offset4 span4">
+                            <div class="easy-pie-chart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span5">
+        <div class="portlet">
+            <div class="portlet-title">
+                <div class="caption"><i class="icon-reorder"></i>Cozinha</div>
+                <div class="tools">
+                    <a href="javascript: void(0);" class="collapse"></a>
+                    <a href="javascript: void(0);" class="reload"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="well">
+                    <div class="row-fluid">
+                        <div class="offset4 span4">
+                            <div class="easy-pie-chart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    Framework._handlePortlets();
+</script>
 </div>
