@@ -96,7 +96,17 @@
     <favorites_list name="smartcontrollenergy" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3172" column="1" selection-start="58609" selection-end="58609" vertical-scroll-proportion="0.39401197">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -120,8 +130,8 @@
         <option value="$PROJECT_DIR$/public/pageUser.tpl.html" />
         <option value="$PROJECT_DIR$/public/pageIntro.tpl.html" />
         <option value="$PROJECT_DIR$/library/Application.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/pageTimeline.tpl.html" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -205,6 +215,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartcontrollenergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartcontrollerenergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartcontrollenergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartcontrollerenergy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -212,14 +254,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="Configurable.PHP" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -252,10 +294,10 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
       <method />
     </configuration>
-    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
@@ -268,14 +310,14 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="2">
@@ -324,7 +366,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29615796" sideWeight="0.6722408" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29935965" sideWeight="0.6722408" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3971079" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -431,9 +473,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/themes/brown.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="5" selection-start="5681" selection-end="5681" vertical-scroll-proportion="0.6182033">
-          <folding />
-        </state>
+        <state line="227" column="5" selection-start="5681" selection-end="5681" vertical-scroll-proportion="0.6182033" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
@@ -464,13 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="18" selection-start="412" selection-end="412" vertical-scroll-proportion="0.45571095">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/util.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="451" column="5" selection-start="16862" selection-end="16862" vertical-scroll-proportion="0.49483353">
@@ -490,16 +523,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageFooter.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="74" selection-start="900" selection-end="900" vertical-scroll-proportion="0.22130178">
-          <folding />
-        </state>
+        <state line="11" column="74" selection-start="900" selection-end="900" vertical-scroll-proportion="0.22130178" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageFooterIntro.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="74" selection-start="95" selection-end="95" vertical-scroll-proportion="0.020118343">
-          <folding />
-        </state>
+        <state line="1" column="74" selection-start="95" selection-end="95" vertical-scroll-proportion="0.020118343" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageIntro.tpl.html">
@@ -511,9 +540,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="51" selection-start="3207" selection-end="3207" vertical-scroll-proportion="0.72426033">
-          <folding />
-        </state>
+        <state line="71" column="51" selection-start="3207" selection-end="3207" vertical-scroll-proportion="0.72426033" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageTimeline.tpl.html">
@@ -526,6 +553,13 @@
     <entry file="file://$PROJECT_DIR$/public/js/highcharts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="44" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.019813519">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3172" column="1" selection-start="58609" selection-end="58609" vertical-scroll-proportion="0.39401197">
           <folding />
         </state>
       </provider>

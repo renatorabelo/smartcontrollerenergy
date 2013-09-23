@@ -3039,6 +3039,10 @@ input.placeholder, textarea.placeholder {
         right: 12px
     }
 
+    .tile {
+        width: 290px !important
+    }
+
     .page-title small {
         display: block;
         clear: both
@@ -3117,6 +3121,9 @@ input.placeholder, textarea.placeholder {
 
     .hidden-320 {
         display: none
+    }
+    .tile {
+        width: 290px !important
     }
 }
 
