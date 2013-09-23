@@ -12,6 +12,7 @@
                         <li class="color-blue" data-style="blue"></li>
                         <li class="color-brown" data-style="brown"></li>
                         <li class="color-purple" data-style="purple"></li>
+                        <li class="color-grey" data-style="grey"></li>
                         <li class="color-white color-light" data-style="light"></li>
                     </ul>
                 </div>
@@ -81,6 +82,7 @@
                                         <li class=""><a data-toggle="tab" href="#tab_2-2"><i class="icon-picture"></i> Alterar Avatar</a></li>
                                         <li class=""><a data-toggle="tab" href="#tab_3-3"><i class="icon-lock"></i> Alterar senha</a></li>
                                         <li class=""><a data-toggle="tab" href="#tab_4-4"><i class="icon-cog"></i>Config. do Servidor</a></li>
+                                        <li class=""><a data-toggle="tab" href="#tab_5-5"><i class="icon-calendar"></i>Criação de Eventos</a></li>
                                     </ul>
                                 </div>
                                 <div class="span9">
@@ -97,7 +99,7 @@
                                                     <label class="control-label">Email<span class="required">*</span></label>
                                                     <input type="text"  value="[@MAIL]" name="email" class="m-wrap span8 validate[required, custom[email]] text-input">
                                                     <div class="submit-btn">
-                                                        <button type="button" class="btn green" onclick="Framework.formUserValidate();"><i class="m-icon-swapright m-icon-white"></i> Salvar alterações</button>
+                                                        <button type="button" class="btn blue" onclick="Framework.formUserValidate();"><i class="m-icon-swapright m-icon-white"></i> Salvar</button>
                                                     </div>
                                                 </form>
                                                 <div class="alert alert-success hide" id="sucessInfoUser">
@@ -135,7 +137,8 @@
                                                     </div>
                                                     <div class="clearfix"></div>
                                                     <div class="submit-btn">
-                                                        <button type="button" class="btn green"><i class="m-icon-swapright m-icon-white"></i> Salvar </button>
+                                                        <button type="button" class="btn blue"><i class="m-icon-swapright m-icon-white"></i> Salvar </button>
+                                                        <button type="button" class="btn blue" id="tirarFoto" onclick="Framework.openCamera();"><i class="icon-camera"></i> Tirar foto</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -148,7 +151,7 @@
                                                     <label class="control-label">Re-digite a nova senha <span class="required">*</span></label>
                                                     <input type="password" class="m-wrap span8 validate[required,equals[password]] text-input" name="password2" id="password2">
                                                     <div class="submit-btn">
-                                                        <button type="button" class="btn green" onclick="Framework.formPassValidate();"><i class="m-icon-swapright m-icon-white"></i> Alterar Senha </button>
+                                                        <button type="button" class="btn blue" onclick="Framework.formPassValidate();"><i class="m-icon-swapright m-icon-white"></i> Alterar senha </button>
                                                     </div>
                                                 </form>
                                                 <div class="alert alert-success hide" id="sucessPass">
@@ -172,7 +175,7 @@
                                                     <input type="text" name="serialXBee" value="[@XBEESERIAL]" class="m-wrap span8 validate[required] text-input">
                                                     <div class="space5"></div>
                                                     <div class="submit-btn">
-                                                        <button type="button" class="btn green" onclick="Framework.formArdValidate();"><i class="m-icon-swapright m-icon-white"></i> Salvar alterações</button>
+                                                        <button type="button" class="btn blue" onclick="Framework.formArdValidate();"><i class="m-icon-swapright m-icon-white"></i> Salvar</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -184,6 +187,8 @@
                                                 <button class="close" data-dismiss="alert"></button>
                                                 Ocorreu um erro ao salvar os dados no servidor!
                                             </div>
+                                        </div>
+                                        <div id="tab_5-5" class="tab-pane">
                                         </div>
                                     </div>
                                 </div>

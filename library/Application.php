@@ -64,6 +64,7 @@ class Application
                                 echo Template::display(TEMPLATE_DIR.$dataSet.'.tpl.html', $configsPageUser);
                                 break;
                             case "pageDashboard":
+                            case "pageTimeline":
                             case "pageTemperature":
                             case "pageSobre":
                             case "pageDispSala":

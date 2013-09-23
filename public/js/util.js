@@ -115,7 +115,11 @@ var Framework = {
     loadWindow: function (windowName) {
         Framework.request('loadWindow', windowName, 'GET', true, function (response) {
             $('.page-content').empty().append(response);
-            Framework.menuTemplate(windowName);
+            $('#' + windowName).each(function () {
+                $('#' + windowName).addClass('active');
+                $('#' + windowName).children('a > span.arrow').addClass('open');
+            });
+            $('#' + windowName).addClass('active');
             if ($(window).width() < 900) {
                 if($(".nav-collapse").hasClass("in")) {
                     $(".nav-collapse").collapse('hide');
@@ -153,10 +157,10 @@ var Framework = {
         }
         $(".page-container .sidebar-toggler").click(function () {
             if (sideBarOpen) {
-                $(".page-container").addClass("sidebar-closed");
+                $("body").addClass("page-sidebar-closed");
                 sideBarOpen = false;
             } else {
-                $(".page-container").removeClass("sidebar-closed");
+                $("body").removeClass("page-sidebar-closed");
                 sideBarOpen = true;
             }
         })
@@ -210,25 +214,6 @@ var Framework = {
             });
         }
     },
-    menuTemplate: function (windowName) {
-        $("#menu-left").find(".start").each(function () {
-                if ($(this).hasClass('start active')) {
-                    $(this).removeClass('start active');
-                    $(this).find('span:last .arrow').each(function () {
-                        $(this).addClass('arrow');
-                    });
-                }
-            }
-        )
-        $('#' + windowName).addClass('start active');
-        if($(window).width() > 900) {
-            $("#menu-left").find(".start").find('span:last').each(function () {
-                    if ($(this).hasClass('arrow'))
-                        $(this).removeClass('arrow').addClass('selected');
-                }
-            )
-        }
-    },
     _handleStyler: function () {
         var panel = $('.color-panel');
         $('.icon-color', panel).click(function () {
@@ -253,7 +238,7 @@ var Framework = {
                 $('#style_theme').remove();
             } else {
                 $('#style_theme').remove();
-                $('head').append('<link href="public/css/themes/' + color + '.css" rel="stylesheet" id="style_theme" />');
+                $('head').append('<link href="public\\css\\themes\\' + color + '.css" rel="stylesheet" id="style_theme" />');
             }
         }
     },
@@ -283,7 +268,7 @@ var Framework = {
                 crossDomain: true,
                 cache: true,
                 jsonp : false,
-                timeout: 2000,
+                timeout: 300,
                 jsonpCallback: 'callBack',
                 success: function(data) {
                     $('#stateServer').empty().html('<font class="onlineStatus">Online</font>');
@@ -415,9 +400,13 @@ var Framework = {
             });
         }
     },
-    subMenus: function() {
-        $('.sub-menu').on('click', 'li > a', function (e) {
+   Menus: function() {
+        $('#menu-left').on('click', 'li > a', function (e) {
             var menuContainer = jQuery('.page-sidebar ul');
+
+            if($(this).next().hasClass('sub-menu')) {
+                return;
+            }
             menuContainer.children('li.active').removeClass('active');
             menuContainer.children('arrow.open').removeClass('open');
 
@@ -450,12 +439,16 @@ var Framework = {
                 jQuery(this).parent().addClass("open");
                 sub.slideToggle('open');
             }
-
             e.preventDefault();
         });
     },
     isMobile: function() {
         return (window.Mobile);
+    },
+    openCamera: function() {
+        if(Framework.isMobile()) {
+            Mobile.openCamera();
+        }
     }
 };
 
@@ -612,6 +605,107 @@ var Charts = {
             });
         }
     },
+    chartTemperature: function() {
+        $('.chartContainerTemperature').each(function(index, name) {
+            $('#' + name.id).highcharts({
+
+                chart: {
+                    type: 'gauge',
+                    backgroundColor: 'transparent',
+                    plotBorderWidth: 0
+                },
+                credits: {
+                    enabled: 0
+                },
+
+                title: {
+                    text: ''
+                },
+                pane: {
+                    startAngle: -150,
+                    endAngle: 150,
+                    background: [{
+                        backgroundColor: {
+                            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                            stops: [
+                                [0, '#FFF'],
+                                [1, '#333']
+                            ]
+                        },
+                        borderWidth: 0,
+                        outerRadius: '109%'
+                    }, {
+                        backgroundColor: {
+                            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                            stops: [
+                                [0, '#333'],
+                                [1, '#FFF']
+                            ]
+                        },
+                        borderWidth: 1,
+                        outerRadius: '107%'
+                    }, {
+                        // default background
+                    }, {
+                        backgroundColor: '#DDD',
+                        borderWidth: 0,
+                        outerRadius: '105%',
+                        innerRadius: '103%'
+                    }]
+                },
+
+                // the value axis
+                yAxis: {
+                    min: 0,
+                    max: 50,
+
+                    minorTickInterval: 'auto',
+                    minorTickWidth: 1,
+                    minorTickLength: 10,
+                    minorTickPosition: 'inside',
+                    minorTickColor: '#666',
+
+                    tickPixelInterval: 30,
+                    tickWidth: 2,
+                    tickPosition: 'inside',
+                    tickLength: 8,
+                    tickColor: '#666',
+                    labels: {
+                        step: 2,
+                        rotation: 'auto'
+                    },
+                    title: {
+                        text: 'Temperatura/C°'
+                    },
+                    plotBands: [{
+                        from: 0,
+                        to: 17,
+                        color: '#F0F8FF'
+                    }, {
+                        from: 17,
+                        to: 28,
+                        color: '#DDDF0D'
+                    }, {
+                        from: 28,
+                        to: 35,
+                        color: '#FF7F50'
+                    } , {
+                        from: 35,
+                        to: 50,
+                        color: '#FF0000'
+                    }]
+                },
+
+                series: [{
+                    name: 'Temperatura',
+                    data: [22]
+                }],
+                tooltip: {
+                    pointFormat: "Temperatura {point.y:,.1f} °C"
+                }
+            });
+        });
+    },
     reinitialize: function() {
         this.chartTracking();
         this.chartBars();
@@ -620,7 +714,7 @@ var Charts = {
 
 jQuery(document).ready(function () {
     Framework.init();
-    Framework.subMenus();
+    Framework.Menus();
 });
 
 $(window).setBreakpoints({

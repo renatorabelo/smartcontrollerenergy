@@ -12,6 +12,7 @@
                         <li class="color-blue" data-style="blue"></li>
                         <li class="color-brown" data-style="brown"></li>
                         <li class="color-purple" data-style="purple"></li>
+                        <li class="color-grey" data-style="grey"></li>
                         <li class="color-white color-light" data-style="light"></li>
                     </ul>
                 </div>
@@ -43,7 +44,7 @@
             <!-- END PAGE TITLE & BREADCRUMB-->
         </div>
     </div>
-    <div class="span5">
+    <div class="span4">
         <div class="portlet">
             <div class="portlet-title">
                 <div class="caption"><i class="icon-reorder"></i>Quarto 1</div>
@@ -54,15 +55,12 @@
             </div>
             <div class="portlet-body">
                 <div class="well">
-                    <div class="row-fluid">
-                        <div class="offset4 span4">
-                        </div>
-                    </div>
+                    <div id="chartContainerTemperatureQuarto1" class="chartContainerTemperature"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="span5">
+    <div class="span4">
         <div class="portlet">
             <div class="portlet-title">
                 <div class="caption"><i class="icon-reorder"></i>Quarto 2</div>
@@ -73,17 +71,13 @@
             </div>
             <div class="portlet-body">
                 <div class="well">
-                    <div class="row-fluid">
-                        <div class="offset4 span4">
-                            <div class="easy-pie-chart">
-                            </div>
-                        </div>
+                    <div id="chartContainerTemperatureQuarto2" class="chartContainerTemperature">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="span5">
+    <div class="span4">
         <div class="portlet">
             <div class="portlet-title">
                 <div class="caption"><i class="icon-reorder"></i>Sala</div>
@@ -94,17 +88,13 @@
             </div>
             <div class="portlet-body">
                 <div class="well">
-                    <div class="row-fluid">
-                        <div class="offset4 span4">
-                            <div class="easy-pie-chart">
-                            </div>
-                        </div>
+                    <div id="chartContainerTemperatureSala" class="chartContainerTemperature">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="span5">
+    <div class="span4">
         <div class="portlet">
             <div class="portlet-title">
                 <div class="caption"><i class="icon-reorder"></i>Cozinha</div>
@@ -115,11 +105,7 @@
             </div>
             <div class="portlet-body">
                 <div class="well">
-                    <div class="row-fluid">
-                        <div class="offset4 span4">
-                            <div class="easy-pie-chart">
-                            </div>
-                        </div>
+                    <div id="chartContainerTemperatureCozinha" class="chartContainerTemperature">
                     </div>
                 </div>
             </div>
@@ -127,5 +113,6 @@
     </div>
 <script>
     Framework._handlePortlets();
+    Charts.chartTemperature();
 </script>
 </div>

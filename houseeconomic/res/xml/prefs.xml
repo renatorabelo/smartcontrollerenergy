@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+            android:summary="URL Settings"
+            android:title="Settings" >
+        <EditTextPreference
+                android:key="URLServidor"
+                android:summary="Entre com o endereço do servidor"
+                android:title="Endereço do servidor" />
+    </PreferenceCategory>
+</PreferenceScreen>
