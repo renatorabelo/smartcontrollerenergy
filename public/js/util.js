@@ -16,7 +16,7 @@ var Framework = {
                 crossDomain: true,
                 cache: true,
                 jsonp : false,
-                timeout: 3000,
+                timeout: 10000,
                 jsonpCallback: 'callBack',
                 success: function(data) {
                     data = $.parseJSON(data);
@@ -71,12 +71,12 @@ var Framework = {
             $.ajax({
                 type: 'GET',
                 url: response,
+                dataType: 'jsonp',
                 data: data,
-                timeout: 3000,
                 crossDomain: true,
                 cache: true,
                 jsonp : false,
-                timeout: 3000,
+                timeout: 10000,
                 jsonpCallback: 'callBack',
                 success: function(data) {
                     if(responseHandler) {
@@ -289,7 +289,7 @@ var Framework = {
                 crossDomain: true,
                 cache: true,
                 jsonp : false,
-                timeout: 300,
+                timeout: 10000,
                 jsonpCallback: 'callBack',
                 success: function(data) {
                     $('#stateServer').empty().html('<font class="onlineStatus">Online</font>');
