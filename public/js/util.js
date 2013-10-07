@@ -59,9 +59,9 @@ var Framework = {
             $.each(data, function(index, dataReturn){
                 if (charts) {
                     var chart = $('#'+dataReturn.name).highcharts();
-                    chart.series[0].points[0].update(dataReturn.status);
+                    chart.series[0].points[0].update(parseFloat(dataReturn.status));
                 } else {
-                    return dataReturn.status;
+                    document.write(dataReturn.status);
                 }
             });
         }));
