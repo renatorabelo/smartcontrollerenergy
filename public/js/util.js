@@ -53,12 +53,16 @@ var Framework = {
             }
         }
     },
-    requestTemperature: function(iddispositive) {
+    requestTemperature: function(iddispositive, charts) {
         if(Framework.requestArduino(iddispositive, function (data) {
             data = $.parseJSON(data);
             $.each(data, function(index, dataReturn){
-                var chart = $('#'+dataReturn.name).highcharts();
-                chart.series[0].points[0].update(dataReturn.status);
+                if (charts) {
+                    var chart = $('#'+dataReturn.name).highcharts();
+                    chart.series[0].points[0].update(dataReturn.status);
+                } else {
+                    return dataReturn.status;
+                }
             });
         }));
     },
@@ -600,8 +604,7 @@ var Charts = {
                 chart: {
                     type: 'gauge',
                     backgroundColor: 'transparent',
-                    plotBorderWidth: 0,
-                    width: 240
+                    plotBorderWidth: 0
                 },
                 credits: {
                     enabled: 0
@@ -664,7 +667,8 @@ var Charts = {
                         rotation: 'auto'
                     },
                     title: {
-                        text: 'Temperatura/C°'
+                        text: 'Temperatura/C°',
+                        y: 30
                     },
                     plotBands: [{
                         from: 0,
@@ -694,7 +698,7 @@ var Charts = {
                 }
             });
         });
-        Framework.requestTemperature('RTAll');
+        Framework.requestTemperature('RTAll', true);
     },
     reinitialize: function() {
         this.chartTracking();

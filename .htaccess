@@ -17,4 +17,5 @@
     <FilesMatch "\.(html|htm|php)$">
         Header set Cache-Control "max-age=180, private, proxy-revalidate"
     </FilesMatch>
+    Header set Access-Control-Allow-Origin "*"
 </IfModule>

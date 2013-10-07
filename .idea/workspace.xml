@@ -15,7 +15,7 @@
     <file path="/a.dummy" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1381116088128" ignored="false" />
     <file path="/bootstrap-responsive.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367094695223" ignored="false" />
     <file path="/intro.tpl.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367101877177" ignored="false" />
-    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1381116737191" ignored="false" />
+    <file path="/util.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1381118589750" ignored="false" />
     <file path="/Application.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1379907059510" ignored="false" />
     <file path="/pageIntro.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1380476103372" ignored="false" />
     <file path="/metro.css" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1367127386588" ignored="false" />
@@ -70,7 +70,7 @@
     <file path="/Socket.php" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371772789156" ignored="false" />
     <file path="/jquery.validate.js" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1371353142982" ignored="false" />
     <file path="$PROJECT_DIR$/houseeconomic/AndroidManifest.xml" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1379898432951" ignored="false" />
-    <file path="/pageTemperature.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1379897231764" ignored="false" />
+    <file path="/pageTemperature.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1381118578997" ignored="false" />
     <file path="/pageDispSala.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1378667955306" ignored="false" />
     <file path="/pageDispQuartos.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1381115844851" ignored="false" />
     <file path="/pageDispGaragem.tpl.html" changelist="810a5e04-bcab-43d3-b59a-799a514b13fc" time="1379882249122" ignored="false" />
@@ -100,16 +100,25 @@
       <file leaf-file-name="pageTemperature.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageTemperature.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="29" selection-start="2768" selection-end="2768" vertical-scroll-proportion="2.9605262">
+            <state line="104" column="38" selection-start="4556" selection-end="4556" vertical-scroll-proportion="-12.039216">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="util.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="6" selection-start="2301" selection-end="2301" vertical-scroll-proportion="-2.6349025">
+            <state line="63" column="45" selection-start="2382" selection-end="2382" vertical-scroll-proportion="-16.72">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageDispSala.tpl.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/pageDispSala.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="6" selection-start="2157" selection-end="2157" vertical-scroll-proportion="-28.653847">
               <folding />
             </state>
           </provider>
@@ -118,7 +127,16 @@
       <file leaf-file-name="pageDispQuartos.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageDispQuartos.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="42" selection-start="3610" selection-end="3610" vertical-scroll-proportion="-12.961538">
+            <state line="75" column="42" selection-start="3610" selection-end="3610" vertical-scroll-proportion="-22.76923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="46" selection-start="714" selection-end="714" vertical-scroll-proportion="0.36998853">
               <folding />
             </state>
           </provider>
@@ -127,7 +145,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4652" column="1" selection-start="89297" selection-end="89297" vertical-scroll-proportion="-17.56">
+            <state line="4652" column="1" selection-start="89297" selection-end="89297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,7 +154,7 @@
       <file leaf-file-name="pageUser.tpl.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/pageUser.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="52" selection-start="6981" selection-end="7013" vertical-scroll-proportion="-19.615385">
+            <state line="105" column="52" selection-start="6981" selection-end="7013" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,17 +175,17 @@
         <option value="$PROJECT_DIR$/public/pageDashboard.tpl.html" />
         <option value="$PROJECT_DIR$/public/pageDispGaragem.tpl.html" />
         <option value="$PROJECT_DIR$/public/pageDispPiscina.tpl.html" />
-        <option value="$PROJECT_DIR$/public/pageDispSala.tpl.html" />
         <option value="$PROJECT_DIR$/public/pageSobre.tpl.html" />
         <option value="$PROJECT_DIR$/public/pageTimeline.tpl.html" />
         <option value="$PROJECT_DIR$/public/pageUser.tpl.html" />
-        <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/public/css/fonts.css" />
         <option value="$PROJECT_DIR$/library/Template.php" />
         <option value="$PROJECT_DIR$/public/pageDispQuartos.tpl.html" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/js/util.js" />
+        <option value="$PROJECT_DIR$/public/pageDispSala.tpl.html" />
         <option value="$PROJECT_DIR$/public/pageTemperature.tpl.html" />
+        <option value="$PROJECT_DIR$/public/js/util.js" />
+        <option value="$PROJECT_DIR$/.htaccess" />
       </list>
     </option>
   </component>
@@ -322,14 +340,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="Configurable.PHP" />
-    <property name="last_opened_file_path" value="C:/" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="C:/" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -357,10 +375,10 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="CHROME" server_name="debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
@@ -373,14 +391,14 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -420,15 +438,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32552955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19103523" sideWeight="0.6744705" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19316968" sideWeight="0.6744705" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39687848" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -437,6 +454,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32552955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -518,16 +536,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="39" selection-start="440" selection-end="440" vertical-scroll-proportion="0.30106258" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/Session.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.48170012" />
@@ -535,9 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Socket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/memcache.php">
@@ -575,63 +581,76 @@
             <node x="" y="">\StoredLibrary\Application</node>
             <node x="" y="">\StoredLibrary\Template</node>
             <node x="" y="">\StoredLibrary\Login</node>
-            <node x="" y="">\StoredLibrary\Configuration</node>
-            <node x="" y="">\StoredLibrary\Util</node>
             <node x="" y="">\Socket</node>
+            <node x="" y="">\StoredLibrary\Util</node>
+            <node x="" y="">\StoredLibrary\Configuration</node>
             <node x="" y="">\StoredLibrary\Classloader</node>
             <node x="" y="">\StoredLibrary\Connection</node>
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.7822057460611678" x="487.05450236966817" y="529.5" />
+          <settings layout="Hierarchic Group" zoom="0.7822057460611678" x="487.0" y="530.0" />
           <SelectedNodes />
           <Categories>
+            <Category>Constructors</Category>
             <Category>Fields</Category>
             <Category>Methods</Category>
-            <Category>Constructors</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="42" selection-start="660" selection-end="660" vertical-scroll-proportion="0.72426033">
-          <folding />
-        </state>
+        <state line="36" column="42" selection-start="660" selection-end="660" vertical-scroll-proportion="0.72426033" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/pageDispQuartos.tpl.html">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="42" selection-start="3610" selection-end="3610" vertical-scroll-proportion="-12.961538">
+        <state line="4652" column="1" selection-start="89297" selection-end="89297" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/pageUser.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="52" selection-start="6981" selection-end="7013" vertical-scroll-proportion="-19.615385">
+        <state line="105" column="52" selection-start="6981" selection-end="7013" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+    <entry file="file://$PROJECT_DIR$/public/pageDispSala.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4652" column="1" selection-start="89297" selection-end="89297" vertical-scroll-proportion="-17.56">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/pageTemperature.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="29" selection-start="2768" selection-end="2768" vertical-scroll-proportion="2.9605262">
+        <state line="53" column="6" selection-start="2157" selection-end="2157" vertical-scroll-proportion="-28.653847">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="6" selection-start="2301" selection-end="2301" vertical-scroll-proportion="-2.6349025">
+        <state line="63" column="45" selection-start="2382" selection-end="2382" vertical-scroll-proportion="-16.72">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageTemperature.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="38" selection-start="4556" selection-end="4556" vertical-scroll-proportion="-12.039216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pageDispQuartos.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="42" selection-start="3610" selection-end="3610" vertical-scroll-proportion="-22.76923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="46" selection-start="714" selection-end="714" vertical-scroll-proportion="0.36998853">
           <folding />
         </state>
       </provider>
