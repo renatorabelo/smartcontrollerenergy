@@ -53,11 +53,12 @@ var Framework = {
             }
         }
     },
-    requestTemperature: function(idDispositive) {
-        if(Framework.requestArduino(idDispositive, function (data) {
+    requestTemperature: function(iddispositive) {
+        if(Framework.requestArduino(iddispositive, function (data) {
             data = $.parseJSON(data);
             $.each(data, function(index, dataReturn){
-                alert(dataReturn);
+                var chart = $('#'+dataReturn.name).highcharts();
+                chart.series[0].points[0].update(dataReturn.status);
             });
         }));
     },
@@ -599,7 +600,8 @@ var Charts = {
                 chart: {
                     type: 'gauge',
                     backgroundColor: 'transparent',
-                    plotBorderWidth: 0
+                    plotBorderWidth: 0,
+                    width: 240
                 },
                 credits: {
                     enabled: 0
@@ -692,6 +694,7 @@ var Charts = {
                 }
             });
         });
+        Framework.requestTemperature('RTAll');
     },
     reinitialize: function() {
         this.chartTracking();
