@@ -1,20 +1,15 @@
 package br.com.houseeconomic;
 
 import android.net.ConnectivityManager;
+import android.preference.PreferenceManager;
 import android.content.Context;
 
 public class Util {
 
     private static Context AppContext;
-    private static String URL = "http://economichouse.orgfree.com";
-//    private static String URL = "http://192.168.1.2/smartcontrollerenergy";
 
     public static String getURL() {
-        return URL;
-    }
-
-    public static void setURL(String URL) {
-        Util.URL = URL;
+        return PreferenceManager.getDefaultSharedPreferences(Util.getAppContext()).getString("URL", "http://economichouse.orgfree.com");
     }
 
     public static Context getAppContext() {

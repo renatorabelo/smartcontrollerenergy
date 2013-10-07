@@ -1,6 +1,7 @@
 package br.com.houseeconomic;
 
 import android.app.*;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,57 +23,60 @@ public class HouseActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.main);
-        installShortCurtApp(getApplication());
-        Util.setAppContext(this);
-        if(!Util.verifyConnection()) {
-            Toast.makeText(Util.getAppContext(), "Não foi possível estabelecer conexão com o servidor.", Toast.LENGTH_LONG).show();
-            this.finish();
-        } else {
-            this.webView = (WebView)findViewById(R.id.webView);
-            this.webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
-            this.webView.getSettings().setSaveFormData(false);
-            this.webView.getSettings().setJavaScriptEnabled(true);
-            this.webView.getSettings().setSavePassword(false);
-            this.webView.setVerticalScrollBarEnabled(false);
-            this.webView.setHorizontalScrollBarEnabled(false);
-            this.webView.addJavascriptInterface(new JsInterface(), "Mobile");
-            this.webView.setLongClickable(false);
-            this.webView.setWebViewClient(new WebViewClient() {
-                @Override
-                public boolean shouldOverrideUrlLoading(WebView view, String url)
-                {
-                    if (Uri.parse(url).getHost().equals(Uri.parse(Util.getURL()).getHost())) {
-                        return false;
+        if (savedInstanceState == null) {
+            super.onCreate(savedInstanceState);
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            setContentView(R.layout.main);
+            Util.setAppContext(this);
+            if(!Util.verifyConnection()) {
+                Toast.makeText(Util.getAppContext(), "Não foi possível estabelecer conexão com o servidor.", Toast.LENGTH_LONG).show();
+                this.finish();
+            } else {
+                this.webView = (WebView)findViewById(R.id.webView);
+                this.webView.getSettings().setAppCacheEnabled(true);
+                this.webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+                this.webView.getSettings().setUseWideViewPort(true);
+                this.webView.getSettings().setSaveFormData(false);
+                this.webView.getSettings().setJavaScriptEnabled(true);
+                this.webView.getSettings().setSavePassword(false);
+                this.webView.setVerticalScrollBarEnabled(false);
+                this.webView.setHorizontalScrollBarEnabled(false);
+                this.webView.addJavascriptInterface(new JsInterface(), "Mobile");
+                this.webView.setLongClickable(false);
+                this.webView.setWebViewClient(new WebViewClient() {
+                    @Override
+                    public boolean shouldOverrideUrlLoading(WebView view, String url)
+                    {
+                        if (Uri.parse(url).getHost().equals(Uri.parse(Util.getURL()).getHost())) {
+                            return false;
+                        }
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        startActivity(intent);
+                        return true;
                     }
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                    startActivity(intent);
-                    return true;
-                }
-                @Override
-                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                    view.stopLoading();
-                    Toast.makeText(Util.getAppContext(), description, Toast.LENGTH_LONG).show();
-                }
-                public void onLoadResource (WebView view, String url) {
-                    if (moduleLoading == null) {
-                        moduleLoading = new ProgressDialog(Util.getAppContext());
-                        moduleLoading.setIndeterminate(true);
-                        moduleLoading.setCancelable(false);
-                        moduleLoading.setMessage("Loading...");
-                        moduleLoading.show();
+                    @Override
+                    public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                        view.stopLoading();
+                        Toast.makeText(Util.getAppContext(), description, Toast.LENGTH_LONG).show();
                     }
-                }
+                    public void onLoadResource (WebView view, String url) {
+                        if (moduleLoading == null) {
+                            moduleLoading = new ProgressDialog(Util.getAppContext());
+                            moduleLoading.setIndeterminate(true);
+                            moduleLoading.setCancelable(false);
+                            moduleLoading.setMessage("Loading...");
+                            moduleLoading.show();
+                        }
+                    }
 
-                public void onPageFinished(WebView view, String url) {
-                    if (moduleLoading.isShowing()) {
-                        moduleLoading.dismiss();
+                    public void onPageFinished(WebView view, String url) {
+                        if (moduleLoading != null && moduleLoading.isShowing()) {
+                            moduleLoading.dismiss();
+                        }
                     }
-                }
-            });
-            this.webView.loadUrl(Util.getURL());
+                });
+                this.webView.loadUrl(Util.getURL());
+            }
         }
     }
 
@@ -87,9 +91,11 @@ public class HouseActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem Item) {
         switch (Item.getItemId()) {
             case R.id.settings:
-                Intent intent = new Intent(this, PreferencesActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(this, Preferences.class));
                 return true;
+            case R.id.settingsReload:
+                this.webView.reload();
+                this.webView.loadUrl(Util.getURL());
             default:
                 return super.onOptionsItemSelected(Item);
         }
@@ -105,23 +111,6 @@ public class HouseActivity extends Activity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
-    public static void installShortCurtApp(Application application) {
-        Intent shortcutIntent = new Intent(application, HouseActivity.class);
-
-        shortcutIntent.setAction(Intent.ACTION_MAIN);
-
-        Intent addIntent = new Intent();
-        addIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
-        addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "Economic House");
-        addIntent.putExtra("duplicate", false);
-        addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(application, R.drawable.ic_launcher));
-
-        addIntent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
-        application.sendBroadcast(addIntent);
-    }
-
-
 
     public class JsInterface {
         @JavascriptInterface

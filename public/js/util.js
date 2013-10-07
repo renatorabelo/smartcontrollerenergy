@@ -42,7 +42,7 @@ var Framework = {
         } else {
             stateMod = '1';
         }
-        if(Framework.requestArduino(disp+'='+stateMod)) {
+        if(Framework.requestArduino(disp+'='+stateMod, false)) {
             if(stateMod == '0')
             {
                 $('#'+state+' .number').empty().append('OFF');
@@ -53,7 +53,15 @@ var Framework = {
             }
         }
     },
-    requestArduino: function(data) {
+    requestTemperature: function(idDispositive) {
+        if(Framework.requestArduino(idDispositive, function (data) {
+            data = $.parseJSON(data);
+            $.each(data, function(index, dataReturn){
+                alert(dataReturn);
+            });
+        }));
+    },
+    requestArduino: function(data, responseHandler) {
         Framework.request('loadIpArduino', '', 'GET', false, function(response) {
             $.ajax({
                 type: 'GET',
@@ -65,6 +73,11 @@ var Framework = {
                 jsonp : false,
                 timeout: 3000,
                 jsonpCallback: 'callBack',
+                success: function(data) {
+                    if(responseHandler) {
+                        responseHandler(data);
+                    }
+                },
                 error: function(error) {
                     console.error(error.message);
                 }
@@ -125,6 +138,7 @@ var Framework = {
                     $(".nav-collapse").collapse('hide');
                 }
             }
+            Framework._handleStyler();
         })
     },
     init: function () {
@@ -216,29 +230,31 @@ var Framework = {
     },
     _handleStyler: function () {
         var panel = $('.color-panel');
-        $('.icon-color', panel).click(function () {
-            $('.color-mode').show();
-            $('.icon-color-close').show();
-        });
+        if (panel.is(':visible')) {
+            $('.icon-color', panel).click(function () {
+                $('.color-mode').show();
+                $('.icon-color-close').show();
+            });
 
-        $('.icon-color-close', panel).click(function () {
-            $('.color-mode').hide();
-            $('.icon-color-close').hide();
-        });
+            $('.icon-color-close', panel).click(function () {
+                $('.color-mode').hide();
+                $('.icon-color-close').hide();
+            });
 
-        $('li', panel).click(function () {
-            var color = $(this).attr("data-style");
-            setColor(color);
-            $('.inline li', panel).removeClass("current");
-            $(this).addClass("current");
-        });
+            $('li', panel).click(function () {
+                var color = $(this).attr("data-style");
+                setColor(color);
+                $('.inline li', panel).removeClass("current");
+                $(this).addClass("current");
+            });
 
-        var setColor = function (color) {
-            if (color == 'style') {
-                $('#style_theme').remove();
-            } else {
-                $('#style_theme').remove();
-                $('head').append('<link href="public\\css\\themes\\' + color + '.css" rel="stylesheet" id="style_theme" />');
+            var setColor = function (color) {
+                if (color == 'style') {
+                    $('#style_theme').remove();
+                } else {
+                    $('#style_theme').remove();
+                    $('head').append('<link href="public\\css\\themes\\' + color + '.css" rel="stylesheet" id="style_theme" />');
+                }
             }
         }
     },
@@ -296,39 +312,10 @@ var Framework = {
                     $('#errorInfoUser').css({display: 'none'});
                     $('#sucessInfoUser').fadeIn("slow", function() {
                             $(this).removeClass('hide');
-                    }
+                        }
                     );
+                } else {
 
-                } else {
-                    if(!$('#errorInfoUser').hasClass('hide')) {
-                        $('#errorInfoUser').css({display: 'none'});
-                    }
-                    $('#sucessInfoUser').css({display: 'none'});
-                    $('#errorInfoUser').fadeIn("slow", function() {
-                            $(this).removeClass('hide');
-                        }
-                    );
-                    console.error('saveUserInfoError: '+response.message);
-                }
-            });
-        }
-    },
-    formUserValidate: function() {
-        var form = $('#userInfo');
-        form.validationEngine();
-        if(form.validationEngine('validate')) {
-            form = form.serializeObject();
-            Framework.request('saveUserInfo', form, 'POST', false, function (response) {
-                if(response == '1') {
-                    if(!$('#sucessInfoUser').hasClass('hide')) {
-                        $('#sucessInfoUser').css({display: 'none'});
-                    }
-                    $('#errorInfoUser').css({display: 'none'});
-                    $('#sucessInfoUser').fadeIn("slow", function() {
-                            $(this).removeClass('hide');
-                        }
-                    );
-                } else {
                     if(!$('#errorInfoUser').hasClass('hide')) {
                         $('#errorInfoUser').css({display: 'none'});
                     }
@@ -698,7 +685,7 @@ var Charts = {
 
                 series: [{
                     name: 'Temperatura',
-                    data: [22]
+                    data: [0]
                 }],
                 tooltip: {
                     pointFormat: "Temperatura {point.y:,.1f} °C"
@@ -715,6 +702,7 @@ var Charts = {
 jQuery(document).ready(function () {
     Framework.init();
     Framework.Menus();
+    Framework.loadWindow('pageSobre');
 });
 
 $(window).setBreakpoints({

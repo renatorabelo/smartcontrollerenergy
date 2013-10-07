@@ -7,6 +7,12 @@ class Template {
     private $file;
     private $values = array();
     private static $_instance = null;
+    private $_filesCached = array();
+
+    public function getFilesCached()
+    {
+        return $this->_filesCached;
+    }
 
     public function setFile($file) {
         $this->file = $file;
@@ -43,16 +49,18 @@ class Template {
                 $tpl->_set($arraySettings);
             }
         }
+
+        /*if(in_array($tpl->getFile(), $tpl->getFilesCached())) {
+
+        }*/
         if (!file_exists($tpl->getFile())) {
             throw new \Exception("Error loading template file ". $tpl->getFile());
         }
         $output = file_get_contents($tpl->getFile());
-
         foreach ($tpl->getValues() as $key => $value) {
             $tagToReplace = "[@$key]";
             $output = str_replace($tagToReplace, $value, $output);
         }
-
         return $output;
     }
 }
