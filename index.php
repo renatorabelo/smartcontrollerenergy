@@ -13,20 +13,9 @@ $loader->register();
 try {
     \StoredLibrary\Application::getInstance()->run();
 } catch (\Exception $e) {
-    $ErroLayoutBegin = <<<HTML
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-        <h3>Ocorreu um erro ao processar a requisição.</h3>
-        <div style="padding:10px; border:1px solid #666; background:#EFEFEF;">
-            <div style="width:100%; overflow:auto;">
-                <pre><b>Erro:</b>
-HTML;
-    $ErroLayoutMiddle = <<<HTML
-        <br /><b>Trace:</b>
-HTML;
-    $ErroLayoutEnd = <<<HTML
-                </pre>
-            </div>
-        </div>
-HTML;
-    die($ErroLayoutBegin.$e->getMessage().$ErroLayoutMiddle.$e->getTraceAsString().$ErroLayoutEnd);
+    $configs = array(
+        'ERRO' => $e->getMessage(),
+        'TRACE' => $e->getTraceAsString()
+    );
+    die(\StoredLibrary\Template::display(TEMPLATE_DIR.'pageTrace.tpl.html', $configs));
 }

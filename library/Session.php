@@ -13,7 +13,9 @@ class Session {
      * @param Integer $time.
      */
     public function __construct($time = 60) {
-        session_start();
+        if(!isset($_SESSION)) {
+            session_start();
+        }
         $this->time = $time;
     }
 
@@ -44,6 +46,15 @@ class Session {
      */
     public function isRegistered() {
         if (!empty($_SESSION['session_id'])) {
+            return TRUE;
+        }
+        else {
+            return FALSE;
+        }
+    }
+
+    public function isRegisteredParam($value) {
+        if (!empty($_SESSION[$value])) {
             return TRUE;
         }
         else {

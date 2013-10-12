@@ -6,8 +6,8 @@ use StoredLibrary\Template as Template;
 
 class Login
 {
-    private static $_instance = null;
-    protected $_Session;
+    private static $_instance;
+    private $_Session;
 
     public static function getInstance() {
         if(!isset($_instance)) {
@@ -24,7 +24,7 @@ class Login
 
     public function start ($data) {
         if(Util::getInstance()->verifyUserPass($data['username'], $data['password'])) {
-            $this->_Session->register('userLogin', $data['username']);
+            $this->_Session->register('userLogin', Util::encrypt($data['username']));
             $this->_Session->renew();
             $configsTpl = array(
                 'HEADER' => Template::display(TEMPLATE_DIR.'pageHeader.tpl.html',
@@ -62,10 +62,9 @@ class Login
     public function sessionUserName() {
         if(isset($this->_Session)) {
             if($this->_Session->isRegistered()) {
-                return $this->_Session->getSession()['userLogin'];
+                return Util::decrypt($this->_Session->getSession()['userLogin']);
             }
         }
-        return '';
     }
 
     public function logout () {

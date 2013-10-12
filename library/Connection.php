@@ -13,8 +13,8 @@ use StoredLibrary\Configuration as Configuration;
 
 class Connection {
 
-    private static $instance = null;
-    private $_PDOInstance = null;
+    private static $instance;
+    private $_PDOInstance;
     private $query = null;
 
     public function __construct()
@@ -24,7 +24,9 @@ class Connection {
             try {
                 $arrayConfigs = Configuration::get(__DIR__.'/../application.ini');
                 $dsn = $arrayConfigs['database']['adapter'].":host=".$arrayConfigs['database']['host'].";dbname=".$arrayConfigs['database']['dbname'];
-                $this->_PDOInstance = new \PDO($dsn, $arrayConfigs['database']['username'], $arrayConfigs['database']['password']);
+                $this->_PDOInstance = new \PDO($dsn, $arrayConfigs['database']['username'], $arrayConfigs['database']['password'],array(
+                    \PDO::ATTR_PERSISTENT => true
+                ));
                 $this->_PDOInstance->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             } catch (\PDOException $e) {
                 throw new \Exception("PDO Connection error: " . $e->getMessage() . "<br/>");

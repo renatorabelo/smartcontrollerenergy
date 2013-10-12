@@ -5,8 +5,8 @@ use \StoredLibrary;
 
 class Application
 {
-    private static $_instance = null;
-    private $Login = null;
+    private static $_instance;
+    private $Login;
 
     public static function getInstance() {
         if(!isset($_instance)) {

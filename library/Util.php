@@ -5,13 +5,20 @@ use StoredLibrary\Connection as Db;
 
 class Util {
 
-    private static $instance = null;
+    private static $instance;
+    private $SessionUtil;
 
     public static function getInstance() {
         if(!isset($instance)) {
             return self::$instance = new self();
         } else {
             return self::$instance;
+        }
+    }
+
+    public function __construct() {
+        if(!isset($this->SessionUtil)) {
+            $this->SessionUtil = new Session();
         }
     }
 
@@ -54,11 +61,16 @@ class Util {
     }
 
     public function loadIpArduino($login) {
-        $db = Db::getInstance()->select()
-            ->from('user', array('userArduinoIp', 'userArduinoPort'))
-            ->where('userLogin = ?', $login);
-        $values = $db->fetchRow();
-        return $values['userArduinoIp'].':'.$values['userArduinoPort'];
+        if(!$this->SessionUtil->isRegisteredParam('dataArduino')) {
+            $db = Db::getInstance()->select()
+                ->from('user', array('userArduinoIp', 'userArduinoPort'))
+                ->where('userLogin = ?', $login);
+            $values = $db->fetchRow();
+            $this->SessionUtil->register('dataArduino', $values['userArduinoIp'].':'.$values['userArduinoPort']);
+            return $this->SessionUtil->getSession()['dataArduino'];
+        } else {
+            return $this->SessionUtil->getSession()['dataArduino'];
+        }
     }
 
     public function loadURLImage($imageName) {

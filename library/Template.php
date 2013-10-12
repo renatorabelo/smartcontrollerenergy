@@ -2,17 +2,11 @@
 
 namespace StoredLibrary;
 
-class Template {
+class Template  {
 
     private $file;
     private $values = array();
-    private static $_instance = null;
-    private $_filesCached = array();
-
-    public function getFilesCached()
-    {
-        return $this->_filesCached;
-    }
+    private static $_instance;
 
     public function setFile($file) {
         $this->file = $file;
@@ -49,10 +43,6 @@ class Template {
                 $tpl->_set($arraySettings);
             }
         }
-
-        /*if(in_array($tpl->getFile(), $tpl->getFilesCached())) {
-
-        }*/
         if (!file_exists($tpl->getFile())) {
             throw new \Exception("Error loading template file ". $tpl->getFile());
         }
