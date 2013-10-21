@@ -27,25 +27,15 @@ class Login
             $this->_Session->register('userLogin', Util::encrypt($data['username']));
             $this->_Session->renew();
             $configsTpl = array(
-                'HEADER' => Template::display(TEMPLATE_DIR.'pageHeader.tpl.html',
-                    array('TITLE_PAGE' => TITLE_PAGE,
-                        'CSSPATH' => CSSPATH)),
+                'HEADER' => '',
                 'PAGENAMEAPP' => PAGENAMEAPP,
                 'USERSESSION' => strtoupper($this->sessionUserName()),
                 'FOOTERINTRO' => Template::display(TEMPLATE_DIR.'pageFooterIntro.tpl.html'),
                 'FOOTER' => Template::display(TEMPLATE_DIR.'pageFooter.tpl.html', array('JSPATH'  => JSPATH)),
             );
-            return Template::display(TEMPLATE_DIR.'pageIntro.tpl.html', $configsTpl);
+            return json_encode(array('error' => 0, 'msg' => Template::display(TEMPLATE_DIR.'pageIntro.tpl.html', $configsTpl)));
         } else {
-            $configsTpl = array(
-                'HEADER' => Template::display(TEMPLATE_DIR.'pageHeader.tpl.html',
-                    array('TITLE_PAGE' => TITLE_PAGE,
-                        'CSSPATH' => CSSPATH)),
-                'PAGENAMEAPP' => PAGENAMEAPP,
-                'FOOTER' => Template::display(TEMPLATE_DIR.'pageFooter.tpl.html', array('JSPATH'  => JSPATH)),
-                'HIDE'   => ''
-            );
-            return Template::display(TEMPLATE_DIR.'pageLogin.tpl.html', $configsTpl);
+            return json_encode(array('error' => 1, 'msg' => 'Usuário ou senha inválido.'));
         }
     }
 

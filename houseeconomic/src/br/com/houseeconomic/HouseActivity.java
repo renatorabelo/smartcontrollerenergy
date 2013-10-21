@@ -4,6 +4,7 @@ import android.app.*;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.*;
@@ -23,60 +24,60 @@ public class HouseActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        if (savedInstanceState == null) {
-            super.onCreate(savedInstanceState);
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
-            setContentView(R.layout.main);
-            Util.setAppContext(this);
-            if(!Util.verifyConnection()) {
-                Toast.makeText(Util.getAppContext(), "Não foi possível estabelecer conexão com o servidor.", Toast.LENGTH_LONG).show();
-                this.finish();
-            } else {
-                this.webView = (WebView)findViewById(R.id.webView);
-                this.webView.getSettings().setAppCacheEnabled(true);
-                this.webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
-                this.webView.getSettings().setUseWideViewPort(true);
-                this.webView.getSettings().setSaveFormData(false);
-                this.webView.getSettings().setJavaScriptEnabled(true);
-                this.webView.getSettings().setSavePassword(false);
-                this.webView.setVerticalScrollBarEnabled(false);
-                this.webView.setHorizontalScrollBarEnabled(false);
-                this.webView.addJavascriptInterface(new JsInterface(), "Mobile");
-                this.webView.setLongClickable(false);
-                this.webView.setWebViewClient(new WebViewClient() {
-                    @Override
-                    public boolean shouldOverrideUrlLoading(WebView view, String url)
-                    {
-                        if (Uri.parse(url).getHost().equals(Uri.parse(Util.getURL()).getHost())) {
-                            return false;
-                        }
-                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                        startActivity(intent);
-                        return true;
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.main);
+        Util.setAppContext(this);
+        if(!Util.verifyConnection()) {
+            Toast.makeText(Util.getAppContext(), "Não foi possível estabelecer conexão com o servidor.", Toast.LENGTH_LONG).show();
+            this.finish();
+        } else {
+            this.webView = (WebView)findViewById(R.id.webView);
+            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                this.webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+            this.webView.getSettings().setAppCacheEnabled(true);
+            this.webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+            this.webView.getSettings().setUseWideViewPort(true);
+            this.webView.getSettings().setSaveFormData(false);
+            this.webView.getSettings().setJavaScriptEnabled(true);
+            this.webView.getSettings().setSavePassword(false);
+            this.webView.setVerticalScrollBarEnabled(false);
+            this.webView.setHorizontalScrollBarEnabled(false);
+            this.webView.addJavascriptInterface(new JsInterface(), "Mobile");
+            this.webView.setLongClickable(false);
+            this.webView.setWebViewClient(new WebViewClient() {
+                @Override
+                public boolean shouldOverrideUrlLoading(WebView view, String url)
+                {
+                    if (Uri.parse(url).getHost().equals(Uri.parse(Util.getURL()).getHost())) {
+                        return false;
                     }
-                    @Override
-                    public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                        view.stopLoading();
-                        Toast.makeText(Util.getAppContext(), description, Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(intent);
+                    return true;
+                }
+                @Override
+                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                    view.stopLoading();
+                    Toast.makeText(Util.getAppContext(), description, Toast.LENGTH_LONG).show();
+                }
+                public void onLoadResource (WebView view, String url) {
+                    if (moduleLoading == null) {
+                        moduleLoading = new ProgressDialog(Util.getAppContext());
+                        moduleLoading.setIndeterminate(true);
+                        moduleLoading.setCancelable(false);
+                        moduleLoading.setMessage("Loading...");
+                        moduleLoading.show();
                     }
-                    public void onLoadResource (WebView view, String url) {
-                        if (moduleLoading == null) {
-                            moduleLoading = new ProgressDialog(Util.getAppContext());
-                            moduleLoading.setIndeterminate(true);
-                            moduleLoading.setCancelable(false);
-                            moduleLoading.setMessage("Loading...");
-                            moduleLoading.show();
-                        }
-                    }
+                }
 
-                    public void onPageFinished(WebView view, String url) {
-                        if (moduleLoading != null && moduleLoading.isShowing()) {
-                            moduleLoading.dismiss();
-                        }
+                public void onPageFinished(WebView view, String url) {
+                    if (moduleLoading != null && moduleLoading.isShowing()) {
+                        moduleLoading.dismiss();
                     }
-                });
-                this.webView.loadUrl(Util.getURL());
-            }
+                }
+            });
+            this.webView.loadUrl(Util.getURL());
         }
     }
 
@@ -94,8 +95,8 @@ public class HouseActivity extends Activity {
                 startActivity(new Intent(this, Preferences.class));
                 return true;
             case R.id.settingsReload:
-                this.webView.reload();
                 this.webView.loadUrl(Util.getURL());
+                this.webView.clearHistory();
             default:
                 return super.onOptionsItemSelected(Item);
         }
@@ -124,6 +125,10 @@ public class HouseActivity extends Activity {
             if(moduleLoading instanceof ProgressDialog) {
                 if(moduleLoading.isShowing()) moduleLoading.dismiss();
             }
+        }
+
+        public void showMessage(String message) {
+            Toast.makeText(Util.getAppContext(), message, Toast.LENGTH_SHORT).show();
         }
 
         public void openCamera() {

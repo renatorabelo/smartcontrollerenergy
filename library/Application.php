@@ -25,23 +25,21 @@ class Application
     {
         try {
             if (isset($_POST['action'])) {
+                $value = json_decode($_POST['dataset']);
                 switch($_POST['action']) {
                     case 'logar':
-                        echo $this->Login->start(array('username' => $_POST['username'], 'password' => $_POST['password']));
+                        echo $this->Login->start(array('username' => $value->username, 'password' => $value->password));
                         break;
                     case 'logout':
                         echo $this->Login->logout();
                         break;
                     case 'ipArduinoSave':
-                        $value = json_decode($_POST['dataset']);
                         echo Util::getInstance()->saveArduino($value, $this->Login->sessionUserName());
                         break;
                     case 'saveUserInfo':
-                        $value = json_decode($_POST['dataset']);
                         echo Util::getInstance()->saveUserInfo($value, $this->Login->sessionUserName());
                         break;
                     case 'savePassword':
-                        $value = json_decode($_POST['dataset']);
                         echo Util::getInstance()->savePassword($value, $this->Login->sessionUserName());
                 }
             } elseif(isset($_GET['action'])) {
@@ -99,8 +97,8 @@ class Application
                 } else {
                     $configsTpl = array(
                         'HEADER' => Template::display(TEMPLATE_DIR.'pageHeader.tpl.html',
-                                                        array('TITLE_PAGE' => TITLE_PAGE,
-                                                              'CSSPATH' => CSSPATH)),
+                            array('TITLE_PAGE' => TITLE_PAGE,
+                                'CSSPATH' => CSSPATH)),
                         'FOOTER' => Template::display(TEMPLATE_DIR.'pageFooter.tpl.html', array('JSPATH'  => JSPATH)),
                         'HIDE'   => 'hide',
                         'PAGENAMEAPP' => PAGENAMEAPP,

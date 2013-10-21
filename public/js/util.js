@@ -61,7 +61,7 @@ var Framework = {
                     var chart = $('#'+dataReturn.name).highcharts();
                     chart.series[0].points[0].update(parseFloat(dataReturn.status));
                 } else {
-                    document.write(dataReturn.status);
+                    return dataReturn.status;
                 }
             });
         }));
@@ -112,7 +112,8 @@ var Framework = {
             type: type,
             url: 'index.php',
             data: params,
-            timeout: 30000,
+            timeout: 3000,
+            cache: true,
             success: function (response) {
                 responseHandler(response);
             },
@@ -182,12 +183,10 @@ var Framework = {
                 $("body").removeClass("page-sidebar-closed");
                 sideBarOpen = true;
             }
-        })
-        $('.page-sidebar .sidebar-toggler').click(function () {
             setTimeout(function () {
                 Charts.reinitialize();
             }, 100);
-        });
+        })
     },
     handleSidenarAndContentHeight: function () {
         var content = $('.page-content');
@@ -289,20 +288,43 @@ var Framework = {
                 crossDomain: true,
                 cache: true,
                 jsonp : false,
-                timeout: 10000,
+                timeout: 2000,
                 jsonpCallback: 'callBack',
-                success: function(data) {
-                    $('#stateServer').empty().html('<font class="onlineStatus">Online</font>');
-                },
-                error: function(data) {
-                    $('#stateServer').empty().html('<font class="offlineStatus">Offline</font>');
+                complete: function(data) {
+                    if(data.readyState == 4 && data.status == 200) {
+                        $('#stateServer').empty().html('<font class="onlineStatus">Online</font>');
+                    } else {
+                        $('#stateServer').empty().html('<font class="offlineStatus">Offline</font>');
+                    }
                 }
             });
         });
         return true;
     },
     _loginValidate: function() {
-        $('.login-form').validationEngine();
+        var form = $('.login-form');
+        form.validationEngine();
+        if(form.validationEngine('validate')) {
+            form = form.serializeObject();
+            Framework.request('logar', form, 'POST', true, function (response) {
+                response = $.parseJSON(response);
+                if(response.error) {
+                    if(Framework.isMobile()) {
+                        window.Mobile.showMessage(response.msg);
+                    } else {
+                        $('#error #errormsg').empty().append(response.msg);
+                        $('#error').slideDown(400, function() {
+                            $(this).removeClass('hide');
+                        });
+                    }
+                } else {
+                    document.getElementById('ajaxLoad').innerHTML = response.msg;
+                    Framework.Menus();
+                    Framework.loadWindow('pageSobre');
+                    Framework.init();
+                }
+            });
+        }
     },
     formUserValidate: function() {
         var form = $('#userInfo');
@@ -433,6 +455,13 @@ var Framework = {
             }
             e.preventDefault();
         });
+    },
+    hideMsgAjaxLogin: function() {
+       $('#closeMsgErrorAjax').click(function() {
+          $(this).parent().addClass('hide').slideUp(400);
+           event.stopPropagation();
+           event.preventDefault();
+       });
     },
     isMobile: function() {
         return (window.Mobile);
@@ -709,6 +738,7 @@ var Charts = {
 jQuery(document).ready(function () {
     Framework.init();
     Framework.Menus();
+    Framework.hideMsgAjaxLogin();
     Framework.loadWindow('pageSobre');
 });
 

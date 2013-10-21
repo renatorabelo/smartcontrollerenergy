@@ -94,7 +94,7 @@
                                                     <label class="control-label">Sobrenome</label>
                                                     <input type="text" value="[@LASTNAME]" name="lastname"  class="m-wrap span8">
                                                     <label class="control-label">Login </label>
-                                                    <input type="text"  value="[@LOGIN]" name="login" readonly class="m-wrap span8">
+                                                    <input type="text"  value="[@LOGIN]" name="login" disabled readonly class="m-wrap span8">
                                                     <label class="control-label">Email<span class="required">*</span></label>
                                                     <input type="text"  value="[@MAIL]" name="email" class="m-wrap span8 validate[required, custom[email]] text-input">
                                                     <div class="submit-btn">
@@ -188,6 +188,40 @@
                                             </div>
                                         </div>
                                         <div id="tab_5-5" class="tab-pane">
+                                            <form id="eventsTimeLine">
+                                                <div style="height: auto;" id="accordion5-5" class="accordion collapse in">
+                                                    <div class="control-group">
+                                                        <div class="control-group">
+                                                            <label class="control-label">Componentes</label>
+                                                            <div class="controls">
+                                                                <select class="large m-wrap" tabindex="1">
+                                                                    <option value="LuzSala">Lâmpada - Sala</option>
+                                                                    <option value="LuzQuarto1">Lâmpada - Quarto 1</option>
+                                                                    <option value="LuzQuarto2">Lâmpada - Quarto 2</option>
+                                                                    <option value="Piscina">Luzes - Piscina</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <label class="control-label">Descrição do evento</label>
+                                                        <div class="controls">
+                                                            <textarea class="large m-wrap" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="space5"></div>
+                                                    <div class="submit-btn">
+                                                        <button type="button" class="btn blue" onclick="Framework.formArdValidate();"><i class="m-icon-swapright m-icon-white"></i> Criar evento</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="alert alert-success hide" id="sucessEvent">
+                                                <button class="close" data-dismiss="alert"></button>
+                                                Alteração realizada com sucesso!
+                                            </div>
+                                            <div class="alert alert-error hide" id="errorEvent">
+                                                <button class="close" data-dismiss="alert"></button>
+                                                Ocorreu um erro ao salvar os dados no servidor!
+                                            </div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
